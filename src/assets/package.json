@@ -1,0 +1,90 @@
+[
+  {
+    "title": "Котлета куриная с грибным соусом",
+    "img": "https://s98540.cdn.ngenix.net/i/400x400-fit/xdelivery/files/96/be/1c59280afb2fee413c6b9a89a9d2.jpg",
+    "prices": ["180","250","300"],
+    "portionsizes": ["200","300","400"],
+    "notation": "граммы",
+    "type": "первое",
+    "id": "0"
+  },
+  {
+    "title": "Паста с цыплёнком",
+    "img": "https://s98540.cdn.ngenix.net/i/400x400-fit/xdelivery/files/7d/b7/96d9e1a2824d9b4c348b8627e801.jpg",
+    "prices": ["180","250","300"],
+    "portionsizes": ["200","300","400"],
+    "notation": "граммы",
+    "type": "первое",
+    "id": "1"
+  },
+  {
+    "title": "Жюльен с индейкой",
+    "img": "https://s98540.cdn.ngenix.net/i/400x400-fit/xdelivery/files/f8/0a/80876c5b57e3dfe2c4c9e14e81e5.jpg",
+    "prices": ["180","250","300"],
+    "portionsizes": ["200","300","400"],
+    "notation": "граммы",
+    "type": "первое",
+    "id": "2"
+  },
+  {
+    "title": "Панини Шеф Перекрёсток с ветчиной и омлетом",
+    "img": "https://s98540.cdn.ngenix.net/i/400x400-fit/xdelivery/files/03/35/xddba0ac89f66bd3b944a0c0a05a.jpg",
+    "prices": ["180","250","300"],
+    "portionsizes": ["200","300","400"],
+    "notation": "граммы",
+    "type": "закуска",
+    "id": "3"
+  },
+  {
+    "title": "Шаурма с курицей",
+    "img": "https://s98540.cdn.ngenix.net/i/400x400-fit/xdelivery/files/68/9a/766fxde022bcaaf01447c74e7594.jpg",
+    "prices": ["180","250","300"],
+    "portionsizes": ["200","300","400"],
+    "notation": "граммы",
+    "type": "закуска",
+    "id": "4"
+  },
+  {
+    "title": "Десерт Пломбир с шоколадом",
+    "img": "https://s98540.cdn.ngenix.net/i/400x400-fit/xdelivery/files/55/58/cd8289b3a37478ec6f77a4fdb226.png",
+    "prices": ["180","250","300"],
+    "portionsizes": ["200","300","400"],
+    "notation": "граммы",
+    "type": "десерт",
+    "id": "5"
+  },
+  {
+    "title": "Десерт Тирамису",
+    "img": "https://s98540.cdn.ngenix.net/i/400x400-fit/xdelivery/files/26/97/27f9ee5fb0a1f0b5575f90c3c756.jpg",
+    "prices": ["180","250","300"],
+    "portionsizes": ["200","300","400"],
+    "notation": "граммы",
+    "type": "десерт",
+    "id": "6"
+  },
+  {
+    "title": "Кекс Перекрёсток Маффин",
+    "img": "https://s98540.cdn.ngenix.net/i/400x400-fit/xdelivery/files/53/46/82f18eec473c6bfd134b2dfbe150.jpg",
+    "prices": ["180","250","300"],
+    "portionsizes": ["200","300","400"],
+    "notation": "граммы",
+    "type": "десерт",
+    "id": "7"
+  },
+  {
+    "title": "Напиток безалкогольный Coca-Cola ванила газированный",
+    "img": "https://s98540.cdn.ngenix.net/i/400x400-fit/xdelivery/files/25/01/c8185c716645bccea743d71b7174.jpg",
+    "prices": ["180","250","300"],
+    "notation": "штуки",
+    "type": "напиток",
+    "id": "8"
+  },
+  {
+    "title": "Напиток сокосодержащий Любимый Тропический микс",
+    "img": "https://s98540.cdn.ngenix.net/i/400x400-fit/xdelivery/files/5d/1a/d84b00426b8993c98f9036948b26.jpg",
+    "prices": ["180","250","300"],
+    "notation": "штуки",
+    "type": "напиток",
+    "id": "9"
+  }
+]

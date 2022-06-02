@@ -1,0 +1,101 @@
+.wrapper {
+    box-sizing: border-box;
+    width: 360px;
+    height: 530px;
+    margin: 5px 0;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+
+}
+.wrapper img {
+    width: 75%;
+    display: block;
+}
+.user_settings {
+    margin-top: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 15px;
+}
+.user_settings *:not(:last-child){
+    margin-bottom: 5px;
+}
+.title{
+    text-align: center;
+    font-size: 25px;
+}
+
+.portion_area button {
+    font-size: 18px;
+    border: none;
+    border-radius: 20px;
+    background-color: palegoldenrod; /* Green background */
+    color: white; /* White text */
+    padding: 10px 15px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    margin: 0 3px;
+}
+
+.portion_area .active {
+    background-color: goldenrod;
+}
+
+.count_area {
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+    min-width: 108px;
+    width: max-content;
+}
+.count_area *{
+    font-size: 25px;
+}
+.count_area button {
+    border: none;
+    border-radius: 100%;
+    background-color: #cfcfcf; /* Green background */
+    color: white; /* White text */
+
+    padding: 3px 10px;
+
+    cursor: pointer; /* Pointer/hand icon */
+}
+
+.count_area button:hover {
+    background: sandybrown;
+}
+
+.addcart_button {
+    border-radius: 10px;
+    border: none;
+    padding: 4px 10px;
+    font-size: 20px;
+    margin-left: auto;
+    background: lightgray;
+    color: white;
+}
+
+.addcart_button:hover {
+    background:sandybrown;
+}
+
+.addcart_button:active {
+
+    background: lightgreen;
+}
+
+.bottom_area p{
+    font-size: 40px;
+}
+.bottom_area{
+    display: flex;
+    width: 90%;
+
+}

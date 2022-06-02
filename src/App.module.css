@@ -1,0 +1,23 @@
+.wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: max-content;
+  display:flex;
+
+}
+.header{
+  width: 15%;
+  height: 100vh;
+  position: fixed;
+  background: #efefef;
+}
+
+.content{
+  margin-left: 17.5%;
+  width: 80%;
+  background: #efefef;
+  padding: 2vh;
+  border-radius: 10px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
