@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import style from './App.module.css';
 import Home from './pages/Home'
 import Cart from './pages/Cart'
@@ -13,7 +13,6 @@ function App() {
 
     return (
         <div className={style.wrapper}>
-
             <div className={style.header}>
                 <Header/>
             </div>

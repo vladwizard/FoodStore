@@ -4,12 +4,11 @@ import {useDispatch} from 'react-redux'
 import {addToCart} from "../../Redux/slices/cartSlice.js";
 
 export default function FoodBlock({food}) {
+    const dispatch = useDispatch();
 
     const [count, setCount] = React.useState(1);
     const [portionSize, setPortion] = React.useState(0);
 
-
-    const dispatch = useDispatch()
     return (
         <div className={style.wrapper}>
             <img src={food.img} alt=""/>
@@ -42,7 +41,7 @@ export default function FoodBlock({food}) {
                                 portionSize
                             ]
                         ));
-                        setPortion(0);
+                        // setPortion(0);
                         setCount(1)
                     }}>
                         Добавить
