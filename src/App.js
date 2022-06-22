@@ -12,7 +12,8 @@ import {
 function App() {
     const headerRef = React.useRef();
     const verticalOrientation = window.innerWidth > window.innerHeight;
-    const [headerToggle, setHeaderToggle] = React.useState(verticalOrientation);
+    const mobile = window.innerWidth < 1080;
+    const [headerToggle, setHeaderToggle] = React.useState(!mobile);
 
     const headerWidth = verticalOrientation ? [300,'px'] : [100,'%'];
 
@@ -36,7 +37,7 @@ function App() {
                  }}
             >
                 <Header closerHeader={() => {
-                    if (!verticalOrientation)
+                    if (mobile)
                         setHeaderToggle(false)
                 }}/>
             </div>

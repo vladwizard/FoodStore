@@ -1,7 +1,5 @@
 .wrapper {
     box-sizing: border-box;
-    width: 360px;
-    height: 530px;
     margin: 5px 0;
     background: white;
     display: flex;
@@ -9,37 +7,47 @@
     align-items: center;
     border-radius: 10px;
 
+    font-size: 1.6rem;
 }
 .wrapper img {
     width: 75%;
+    max-width: 400px;
+    max-height: 400px;
     display: block;
 }
 .user_settings {
     margin-top: auto;
     width: 90%;
+
+    grid-gap: 10px;
+    padding-bottom: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 15px;
 }
-.user_settings *:not(:last-child){
+.user_settings > *:not(:last-child){
     margin-bottom: 5px;
 }
 .title{
     text-align: center;
-    font-size: 25px;
+    font-size: 1.1em;
 }
-
+.portion_area{
+    min-width: 80%;
+    width: max-content;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
 .portion_area button {
-    font-size: 18px;
+    font-size: 0.9em;
     border: none;
-    border-radius: 20px;
-    background-color: palegoldenrod; /* Green background */
-    color: white; /* White text */
-    padding: 10px 15px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    float: left; /* Float the buttons side by side */
-    margin: 0 3px;
+    border-radius: 15px;
+    background-color: palegoldenrod;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+
 }
 
 .portion_area .active {
@@ -48,23 +56,19 @@
 
 .count_area {
     display: flex;
-    align-items: center;
 
-    justify-content: space-between;
-    min-width: 108px;
-    width: max-content;
+    align-items: center;
 }
 .count_area *{
-    font-size: 25px;
+    font-size: 1.2em;
 }
 .count_area button {
     border: none;
-    border-radius: 100%;
+    border-radius: 100px;
     background-color: #cfcfcf; /* Green background */
     color: white; /* White text */
-
-    padding: 3px 10px;
-
+    margin: 0 15px;
+    padding: 3px 23px;
     cursor: pointer; /* Pointer/hand icon */
 }
 
@@ -76,7 +80,7 @@
     border-radius: 10px;
     border: none;
     padding: 4px 10px;
-    font-size: 20px;
+    font-size: 0.8em;
     margin-left: auto;
     background: lightgray;
     color: white;
@@ -92,7 +96,7 @@
 }
 
 .bottom_area p{
-    font-size: 40px;
+    font-size: 1.5em;
 }
 .bottom_area{
     display: flex;

@@ -20,11 +20,13 @@
     box-sizing: border-box;
     //width: 15%;
   }
-  .contentWrapper{
+
+  .contentWrapper {
     //height: calc(2vh + 50px);
     height: 100px;
     background: green;
   }
+
   .content {
     height: inherit;
     margin: 0 calc(2vh + 50px);
@@ -48,24 +50,35 @@
   }
 }
 
-@media (orientation: portrait) {
+@mixin mobileHeader() {
   .wrapper {
-    flex-direction: column;
 
     .header {
-      //width: 100%;
       position: absolute;
     }
-    .contentWrapper{
-      //height: calc(2vh + 50px);
 
-      background: green;
-    }
+  }
+}
+
+@media (orientation: portrait) {
+  @include mobileHeader();
+  .wrapper {
     .content {
       margin: calc(2vh + 50px) 0 0 0;
-      padding-bottom:  calc(2vh + 50px);
+      padding-bottom: calc(2vh + 50px);
       box-sizing: border-box;
     }
   }
 }
+
+@media screen and (max-width: 1080px) {
+  @include mobileHeader();
+  .wrapper {
+    .content {
+
+    }
+}
+
+
+
 

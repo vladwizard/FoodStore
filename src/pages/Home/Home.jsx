@@ -37,35 +37,38 @@ export default function Home() {
 
     //Сзодание дополнительных блоков еды для форматирования
     const contentRef = React.useRef(null);
-    let [extraCells, setExtraCells] = React.useState([]);
 
 
-    const [cellWidth, setCellWidth] = React.useState(200);
+    // let [extraCells, setExtraCells] = React.useState([]);
+    //
+    //
+    // const [cellWidth, setCellWidth] = React.useState(200);
 
-    const createExtraCells = (cellWidth) => {
+    // const createExtraCells = (cellWidth) => {
+    //
+    //     let contentWidth = contentRef.current.clientWidth;
+    //     let lineMaxLength = Math.floor(contentWidth / cellWidth); //сколь максимум в одной строчке
+    //     let inLast = foodArray.length % lineMaxLength;
+    //     let needCount = lineMaxLength - inLast;
+    //
+    //     if (inLast == 0 || isNaN(needCount)) needCount = 0;
+    //     setExtraCells([...Array(needCount).keys()]);
+    // }
 
-        let contentWidth = contentRef.current.clientWidth;
-        let lineMaxLength = Math.floor(contentWidth / cellWidth); //сколь максимум в одной строчке
-        let inLast = foodArray.length % lineMaxLength;
-        let needCount = lineMaxLength - inLast;
-
-        if (inLast == 0 || isNaN(needCount)) needCount = 0;
-        setExtraCells([...Array(needCount).keys()]);
-    }
-
-    let [resize, setResize] = React.useState(0);
-    window.onresize = () => {
-        setResize(resize + 1)
-    }
-    React.useEffect(() => {
-            if (contentRef.current != null && contentRef.current.children.length > 0) {
-                let currentCellWidth = parseInt(window.getComputedStyle(contentRef.current.children[0]).width);
-                setCellWidth(currentCellWidth);
-                createExtraCells(currentCellWidth);
-            }
-        }
-        , [resize, contentRef.current?.children])
-
+    // let [resize, setResize] = React.useState(0);
+    // window.onresize = () => {
+    //     setResize(resize + 1)
+    // }
+    // React.useEffect(() => {
+    //         if (contentRef.current != null && contentRef.current.children.length > 0) {
+    //             let currentCellWidth = parseInt(window.getComputedStyle(contentRef.current.children[0]).width);
+    //             setCellWidth(currentCellWidth);
+    //             createExtraCells(currentCellWidth);
+    //         }
+    //     }
+    //     , [resize, contentRef.current?.children])
+    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
+    window.onresize = () => setWindowWidth(window.innerWidth);
     return (
         <div className={style.wrapper}>
             <div className={style.header}>
@@ -84,15 +87,17 @@ export default function Home() {
                     refreshFood();
                 }}/>
             </div>
-            <div className={style.content} ref={contentRef}>
+            <div className={style.content} ref={contentRef}
+//            (windowWidth>500?Math.floor(windowWidth / 500):2)
+                 style={{'grid-template-columns': 'repeat(' + Math.round(windowWidth / 430) + ',1fr)'}}>
                 {foodArray.map((food, i) => <FoodBlock food={food} key={i}/>)}
 
                 {/*{console.log(contentRef.current!=null&&contentRef.current.children.length>0?contentRef.current.children[0]:'')}*/}
                 {/*{console.log(contentRef.current!=null&&contentRef.current.children.length>0?parseInt(window.getComputedStyle(contentRef.current.children[0]).width):'')}*/}
-                {extraCells.map((x, index) =>
-                    <div key={index} style={{'width': cellWidth + 'px'}}>
-                    </div>
-                )}
+                {/*{extraCells.map((x, index) =>*/}
+                {/*    <div key={index} style={{'width': cellWidth + 'px'}}>*/}
+                {/*    </div>*/}
+                {/*)}*/}
 
             </div>
 

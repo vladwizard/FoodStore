@@ -40,19 +40,18 @@
   }
 }
 @media (orientation: portrait) {
-  .wrapper {
-    flex-direction: column;
-  }
   .wrapper .header {
     position: absolute;
-  }
-  .wrapper .contentWrapper {
-    background: green;
   }
   .wrapper .content {
     margin: calc(2vh + 50px) 0 0 0;
     padding-bottom: calc(2vh + 50px);
     box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .wrapper .header {
+    position: absolute;
   }
 }
 

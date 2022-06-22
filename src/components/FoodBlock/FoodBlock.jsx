@@ -16,7 +16,6 @@ export default function FoodBlock({food}) {
                 <p className={style.title}>{food.title}</p>
                 {
                     food.notation == "граммы" ?
-                        <div>
                             <div className={style.portion_area}>
                                 {food.portionsizes.map((portion, i) => <button
                                     className={i == portionSize ? style.active : ""}
@@ -25,7 +24,6 @@ export default function FoodBlock({food}) {
 
                                     {portion + "гр"} </button>)}
                             </div>
-                        </div>
                         : ""
                 }
                 <div className={style.count_area}>

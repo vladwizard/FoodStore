@@ -3,8 +3,8 @@
   height: 100%;
   border-radius: 15px;
   box-sizing: border-box;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-gap: 2vh;
   justify-content: space-between;
 }
 
@@ -16,9 +16,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px;
+  padding: 2vh;
   box-sizing: border-box;
   margin-bottom: 10px;
+  flex-wrap: wrap;
 }
 .header .category_area {
   height: max-content;
@@ -36,8 +37,8 @@
 .header .find {
   margin: 5px;
   font-size: 1.4em;
-  max-width: 400px;
-  width: 30%;
+  max-width: 450px;
+  width: 100%;
   padding: 3px 6px;
 }
 .header .active {

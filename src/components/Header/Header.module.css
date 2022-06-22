@@ -7,12 +7,15 @@
 
 .wrapper {
 
-    padding:calc(1vh + 60px) 10px 0 10px;
+    padding:calc(1vh + 50px) 10px 0 10px;
+    /*padding:10px 10px 0 10px;*/
+
     font-size: 15px;
 }
 
 .wrapper .link {
     margin-bottom: 12px;
+    /*margin-left: calc(1vh + 50px);*/
     padding: 9px 10px 15px 10px;
     text-decoration: none;
     line-height: 15px;
