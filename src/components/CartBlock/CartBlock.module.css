@@ -1,65 +1,75 @@
-.wrapper *{
-    font-size: 20px;
-
+.wrapper * {
+  font-size: 20px;
 }
-.wrapper:not(:last-child){
-    margin-bottom: 10px;
-}
-.wrapper{
-    background: white;
-    height: max-content;
-    display: flex;
 
-    max-width: 800px;
-    width: 100%;
-    border-radius: 10px;
+.wrapper {
+  margin-bottom: 10px;
+}
+
+.wrapper {
+  background: white;
+  height: max-content;
+  display: flex;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
 }
 .wrapper img {
-    height: 250px;
-    border-radius: inherit;
-    max-height: 50vh;
+  height: 250px;
+  width: 250px;
+  border-radius: inherit;
+  max-height: 50vh;
+  display: block;
+  margin: 0 auto;
 }
-.title{
-    padding: 2px 5px 4px 7px;
-    font-size: 1.2em;
+.wrapper .title {
+  padding: 2px 5px 4px 7px;
+  font-size: 1.2em;
 }
-.right_area {
-    background: #efefef;
-    padding: 5px 15px;
-    margin: 10px;
-    width: 100%;
-    border-radius: 5px;
-    overflow: auto;
+.wrapper .right_area {
+  background: #efefef;
+  padding: 5px 15px;
+  margin: 10px;
+  width: 95%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  overflow: auto;
 }
-.count_area{
-    margin-bottom: 5px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 5px 15px;
-    display: flex;
-    justify-content: space-between;
-    background: white;
-    border-radius: 5px;
 
+.count_area {
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 5px;
 }
 .count_area * {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.count_area *:not(:last-child) {
+  margin-bottom: 4px;
+}
+.count_area button {
+  border: none;
+  font-size: 17px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #efefef;
+}
+.count_area button:hover {
+  background: sandybrown;
+}
 
-}
-.count_area *:not(:last-child){
-    margin-bottom: 4px;
-}
-.count_area button{
-    border: none;
-    font-size: 17px;
-    padding: 5px 10px;
-    background: white;
-    border-radius: 5px;
-    background: #efefef;
+@media (orientation: portrait) {
+  .wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 
-.count_area button:hover{
-    background:sandybrown;
-}
+/*# sourceMappingURL=CartBlock.module.css.map */

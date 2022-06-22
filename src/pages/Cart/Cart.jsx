@@ -1,5 +1,5 @@
 import style from "./Cart.module.css";
-import CartBlock from "../../components/CartBlock";
+import CartBlock from "../../components/CartBlock/CartBlock";
 import {useSelector} from "react-redux";
 
 
@@ -9,7 +9,7 @@ export default function Home() {
 
     return (
         <div className={style.content}>
-            {console.log(cartMap)}
+            {/*{console.log(cartMap)}*/}
             {
                 [...cartMap.entries()].map((item, index) =>
 

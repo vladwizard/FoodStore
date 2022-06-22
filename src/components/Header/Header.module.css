@@ -6,7 +6,8 @@
 }
 
 .wrapper {
-    padding:2vh 10px 10px 10px;
+
+    padding:calc(1vh + 60px) 10px 0 10px;
     font-size: 15px;
 }
 

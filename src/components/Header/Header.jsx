@@ -3,13 +3,13 @@ import React from "react";
 import {useSelector} from "react-redux";
 import style from "./Header.module.css"
 
-export default function Header() {
+export default function Header({closerHeader}) {
     const cartCount = useSelector((state) => state.cart.size)
     const finalPrice = useSelector((state) => state.cart.finalPrice)
     return (
         <div className={style.wrapper}>
-            <Link className={style.link} to="/">Главная</Link>
-            <Link className={style.link} to="/cart">Корзина</Link>
+            <Link className={style.link} onClick={closerHeader} to="/">Главная</Link>
+            <Link className={style.link} onClick={closerHeader} to="/cart">Корзина</Link>
 
             <div className={style.count_area}>
                 <p>Товаров в корзине</p>
