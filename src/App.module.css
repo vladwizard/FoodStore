@@ -1,23 +1,59 @@
 .wrapper {
   box-sizing: border-box;
   width: 100%;
-  height: max-content;
-  display:flex;
-
-}
-.header{
-  width: 15%;
   height: 100vh;
-  position: fixed;
-  background: #efefef;
+  display: flex;
+  overflow: hidden;
 }
-
-.content{
-  margin-left: 17.5%;
-  width: 80%;
+.wrapper .headerButton {
+  position: absolute;
+  margin: 1vh 1vh;
+  width: 50px;
+  min-width: 50px;
+  z-index: 100;
+}
+.wrapper .header {
+  height: inherit;
+  background: #efefef;
+  z-index: 0;
+  box-sizing: border-box;
+}
+.wrapper .contentWrapper {
+  height: 100px;
+  background: green;
+}
+.wrapper .content {
+  height: inherit;
+  margin: 0 calc(2vh + 50px);
+  flex: 1;
   background: #efefef;
   padding: 2vh;
   border-radius: 10px;
   min-height: 100vh;
   box-sizing: border-box;
+  overflow: auto;
 }
+
+@media screen and (max-width: 1900px) {
+  .wrapper .content {
+    margin-right: 0;
+  }
+}
+@media (orientation: portrait) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .wrapper .header {
+    position: absolute;
+  }
+  .wrapper .contentWrapper {
+    background: green;
+  }
+  .wrapper .content {
+    margin: calc(2vh + 50px) 0 0 0;
+    padding-bottom: calc(2vh + 50px);
+    box-sizing: border-box;
+  }
+}
+
+/*# sourceMappingURL=App.module.css.map */
