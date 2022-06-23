@@ -3,6 +3,7 @@
     display: grid;
     overflow: hidden;
     border-radius: 5px;
+    white-space: nowrap;
 }
 
 .wrapper {

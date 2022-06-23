@@ -15,10 +15,10 @@
 
   .header {
     height: inherit;
-    background: #efefef;
+    background: #eee;
     z-index: 0;
     box-sizing: border-box;
-    //width: 15%;
+
   }
 
   .contentWrapper {
@@ -29,7 +29,7 @@
 
   .content {
     height: inherit;
-    margin: 0 calc(2vh + 50px);
+    //margin: 0 calc(2vh + 50px);
     flex: 1;
     //width: 200vh;
     background: #efefef;
@@ -41,41 +41,49 @@
   }
 }
 
-@media screen and (max-width: 1900px) {
+
+@media (orientation: landscape) {
   .wrapper {
-    .content {
-      margin-right: 0;
-
-    }
-  }
-}
-
-@mixin mobileHeader() {
-  .wrapper {
-
     .header {
-      position: absolute;
+      width: calc(1vh + 50px);
+      visibility: hidden;
+      transition: width 0.3s;
+      margin-right: 1vh;
+    }
+    .activeHeader{
+      width: 300px;
+      visibility: visible;
     }
 
   }
 }
+// мобилный или маленький экран
+@media screen and (max-width: 1080px) and (orientation: landscape){
 
+    .wrapper {
+      .header {
+        position: absolute;
+      }
+      .content {
+              margin-left: calc(2vh + 50px);
+      }
+    }
+}
 @media (orientation: portrait) {
-  @include mobileHeader();
+
   .wrapper {
+    .header {
+      width: 0;
+      position: absolute;
+      overflow: hidden;
+    }
+    .activeHeader{
+      width: 100%;
+    }
     .content {
-      margin: calc(2vh + 50px) 0 0 0;
+      margin-top: calc(2vh + 50px);
       padding-bottom: calc(2vh + 50px);
       box-sizing: border-box;
-    }
-  }
-}
-
-@media screen and (max-width: 1080px) {
-  @include mobileHeader();
-  .wrapper {
-    .content {
-
     }
   }
 }

@@ -37,8 +37,7 @@
 .header .find {
   margin: 5px;
   font-size: 1.4em;
-  max-width: 450px;
-  width: 100%;
+  width: 30%;
   padding: 3px 6px;
 }
 .header .active {
@@ -50,7 +49,7 @@
     flex-wrap: wrap;
   }
   .header .find {
-    width: 150%;
+    width: 100%;
   }
   .header .category_area {
     flex-wrap: wrap;

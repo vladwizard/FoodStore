@@ -67,6 +67,15 @@ export default function Home() {
     //         }
     //     }
     //     , [resize, contentRef.current?.children])
+    // React.useEffect(()=>{
+    //     console.log(contentRef.current?.style.width)
+    // },[contentRef.current])
+
+    React.useRef(
+    setInterval(()=>{
+            contentRef.current.style.gridTemplateColumns='repeat(' + Math.floor(parseInt(contentRef.current!=null?(window.getComputedStyle(contentRef.current)).width:1000) / 330) + ',1fr)'
+        },200)
+    ,[])
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
     window.onresize = () => setWindowWidth(window.innerWidth);
     return (
@@ -88,8 +97,9 @@ export default function Home() {
                 }}/>
             </div>
             <div className={style.content} ref={contentRef}
-//            (windowWidth>500?Math.floor(windowWidth / 500):2)
-                 style={{'grid-template-columns': 'repeat(' + Math.round(windowWidth / 430) + ',1fr)'}}>
+//           (windowWidth>500?Math.floor(windowWidth / 500):2)
+//                  style={{'grid-template-columns': 'repeat(' + Math.floor(parseInt(contentRef.current!=null?(window.getComputedStyle(contentRef.current)).width:100) / 330) + ',1fr)'}}
+            >
                 {foodArray.map((food, i) => <FoodBlock food={food} key={i}/>)}
 
                 {/*{console.log(contentRef.current!=null&&contentRef.current.children.length>0?contentRef.current.children[0]:'')}*/}
@@ -100,6 +110,7 @@ export default function Home() {
                 {/*)}*/}
 
             </div>
+            {/*{console.log(parseInt(contentRef.current!=null?(window.getComputedStyle(contentRef.current)).width:1000))}*/}
 
         </div>
     )

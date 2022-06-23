@@ -14,7 +14,7 @@
 }
 .wrapper .header {
   height: inherit;
-  background: #efefef;
+  background: #eee;
   z-index: 0;
   box-sizing: border-box;
 }
@@ -24,7 +24,6 @@
 }
 .wrapper .content {
   height: inherit;
-  margin: 0 calc(2vh + 50px);
   flex: 1;
   background: #efefef;
   padding: 2vh;
@@ -34,24 +33,39 @@
   overflow: auto;
 }
 
-@media screen and (max-width: 1900px) {
+@media (orientation: landscape) {
+  .wrapper .header {
+    width: calc(1vh + 50px);
+    visibility: hidden;
+    transition: width 0.3s;
+    margin-right: 1vh;
+  }
+  .wrapper .activeHeader {
+    width: 300px;
+    visibility: visible;
+  }
+}
+@media screen and (max-width: 1080px) and (orientation: landscape) {
+  .wrapper .header {
+    position: absolute;
+  }
   .wrapper .content {
-    margin-right: 0;
+    margin-left: calc(2vh + 50px);
   }
 }
 @media (orientation: portrait) {
   .wrapper .header {
+    width: 0;
     position: absolute;
+    overflow: hidden;
+  }
+  .wrapper .activeHeader {
+    width: 100%;
   }
   .wrapper .content {
-    margin: calc(2vh + 50px) 0 0 0;
+    margin-top: calc(2vh + 50px);
     padding-bottom: calc(2vh + 50px);
     box-sizing: border-box;
-  }
-}
-@media screen and (max-width: 1080px) {
-  .wrapper .header {
-    position: absolute;
   }
 }
 
