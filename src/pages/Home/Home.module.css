@@ -26,6 +26,7 @@
   display: flex;
   align-items: center;
   overflow: auto;
+  flex-wrap: wrap;
 }
 .header .category_area button {
   margin: 5px;
@@ -44,15 +45,9 @@
   background: navajowhite;
 }
 
-@media (orientation: portrait) {
-  .header {
-    flex-wrap: wrap;
-  }
+@media screen and (orientation: portrait), (max-width: 872px) {
   .header .find {
     width: 100%;
-  }
-  .header .category_area {
-    flex-wrap: wrap;
   }
 }
 

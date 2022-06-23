@@ -73,7 +73,7 @@ export default function Home() {
 
     React.useRef(
     setInterval(()=>{
-            contentRef.current.style.gridTemplateColumns='repeat(' + Math.floor(parseInt(contentRef.current!=null?(window.getComputedStyle(contentRef.current)).width:1000) / 330) + ',1fr)'
+            contentRef.current.style.gridTemplateColumns='repeat(' + Math.floor(parseInt(contentRef.current!=null?(window.getComputedStyle(contentRef.current)).width:1000) / 290) + ',1fr)'
         },200)
     ,[])
     const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);

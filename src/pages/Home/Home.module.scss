@@ -37,6 +37,7 @@
     display: flex;
     align-items: center;
     overflow: auto;
+    flex-wrap: wrap;
   }
 
   .category_area button {
@@ -45,6 +46,7 @@
     border-radius: 5px;
     border: none;
     font-size: 1.4em;
+
   }
 
   .find {
@@ -59,21 +61,15 @@
   }
 }
 
-@media (orientation: portrait) {
+@media screen and (orientation: portrait), (max-width: 872px) {
   .header {
 
-    flex-wrap: wrap;
-    //flex-direction: row-reverse;
     .find {
       //max-width: none;
       width: 100%;
     }
 
-    .category_area {
-      flex-wrap: wrap;
-    }
   }
 }
-//@media screen and (min-width: 1080px){
-//
-//}
+
+
