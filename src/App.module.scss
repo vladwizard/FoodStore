@@ -50,43 +50,54 @@
       transition: width 0.3s;
       margin-right: 1vh;
     }
-    .activeHeader{
+
+    .activeHeader {
       width: 300px;
       visibility: visible;
     }
 
   }
 }
-// мобилный или маленький экран
-@media screen and (max-width: 1080px) and (orientation: landscape){
 
-    .wrapper {
-      .header {
-        position: absolute;
-      }
-      .content {
-              margin-left: calc(2vh + 50px);
-      }
-    }
-}
-@media (orientation: portrait) {
+// мобилный или маленький экран
+@media screen and (max-width: 1080px) and (orientation: landscape) {
 
   .wrapper {
     .header {
-      width: 0;
       position: absolute;
-      overflow: hidden;
     }
-    .activeHeader{
-      width: 100%;
-    }
+
     .content {
-      margin-top: calc(2vh + 50px);
-      padding-bottom: calc(2vh + 50px);
-      box-sizing: border-box;
+      margin-left: calc(2vh + 50px);
     }
   }
 }
+
+@media screen and (min-width: 1200px) and (orientation: landscape) {
+  .wrapper {
+    padding-right: calc(50px + 1vh);
+  }
+}
+  @media (orientation: portrait) {
+
+    .wrapper {
+      .header {
+        width: 0;
+        position: absolute;
+        overflow: hidden;
+      }
+
+      .activeHeader {
+        width: 100%;
+      }
+
+      .content {
+        margin-top: calc(2vh + 50px);
+        padding-bottom: calc(2vh + 50px);
+        box-sizing: border-box;
+      }
+    }
+  }
 
 
 
