@@ -67,17 +67,23 @@ export default function Home() {
     //         }
     //     }
     //     , [resize, contentRef.current?.children])
-    // React.useEffect(()=>{
-    //     console.log(contentRef.current?.style.width)
-    // },[contentRef.current])
 
-    React.useRef(
-    setInterval(()=>{
-            contentRef.current.style.gridTemplateColumns='repeat(' + Math.floor(parseInt(contentRef.current!=null?(window.getComputedStyle(contentRef.current)).width:1000) / 290) + ',1fr)'
-        },200)
-    ,[])
-    const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
-    window.onresize = () => setWindowWidth(window.innerWidth);
+    React.useEffect(() => {
+
+            // let contentWidthInterval = setInterval(() => {
+            //         contentRef.current.style.gridTemplateColumns = 'repeat(' + Math.floor(parseInt(contentRef.current != null ? (window.getComputedStyle(contentRef.current)).width : 1000) / 290) + ',1fr)'
+            //         console.log(123);
+            //     }
+            //     , 200);
+            setTimeout(() =>
+                contentRef.current.style.gridTemplateColumns = 'repeat(' + Math.floor(parseInt(contentRef.current != null ? (window.getComputedStyle(contentRef.current)).width : 1000) / 290) + ',1fr)'
+                , 400)
+
+        }, [contentRef.current != null ? (window.getComputedStyle(contentRef.current)).width : null])
+    // window.getComputedStyle(customElements).width
+
+
+    // window.onresize = () => setWindowWidth(window.innerWidth);
     return (
         <div className={style.wrapper}>
             <div className={style.header}>
@@ -91,14 +97,15 @@ export default function Home() {
                         {str}</button>)}
 
                 </div>
-                <input className={style.find} type='text' value={find} placeholder='Строка поиска' onChange={(e) => {
-                    setFind(e.target.value);
-                    refreshFood();
-                }}/>
+                <input className={style.find} type='text' value={find} placeholder='Строка поиска'
+                       onChange={(e) => {
+                           setFind(e.target.value);
+                           refreshFood();
+                       }}/>
             </div>
             <div className={style.content} ref={contentRef}
-//           (windowWidth>500?Math.floor(windowWidth / 500):2)
-//                  style={{'grid-template-columns': 'repeat(' + Math.floor(parseInt(contentRef.current!=null?(window.getComputedStyle(contentRef.current)).width:100) / 330) + ',1fr)'}}
+                //           (windowWidth>500?Math.floor(windowWidth / 500):2)
+                //                  style={{'grid-template-columns': 'repeat(' + Math.floor(parseInt(contentRef.current!=null?(window.getComputedStyle(contentRef.current)).width:100) / 330) + ',1fr)'}}
             >
                 {foodArray.map((food, i) => <FoodBlock food={food} key={i}/>)}
 
