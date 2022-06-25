@@ -6,3 +6,6 @@ Applications for ordering food, for the backend, the Moskapi service was used, w
 ![Screenshot 2022-06-02 18 37 20](https://user-images.githubusercontent.com/72702845/171666807-e1c5d039-4ab4-4da2-9022-6deb7e5df81e.png)
 ## Cart page
 ![Screenshot 2022-06-02 18 39 11](https://user-images.githubusercontent.com/72702845/171667221-77f0081c-4fb1-4d1b-bef5-83ee5f53b017.png)
+## iPHONE SE SCEEN
+![image](https://user-images.githubusercontent.com/72702845/175757397-00b48c35-87db-4bea-b1bc-ac0f3bf5ba1a.png)
+
