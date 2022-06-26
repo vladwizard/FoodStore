@@ -9,10 +9,9 @@ export default function Home() {
 
     return (
         <div className={style.content}>
-            {/*{console.log(cartMap)}*/}
-            {cartMap.size==0?(
+            {cartMap.size == 0 && (
                 <div className={style.empty}>Корзина пуста</div>
-            ):""}
+            )}
             {
 
                 [...cartMap.entries()].map((item, index) =>

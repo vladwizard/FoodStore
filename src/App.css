@@ -4,10 +4,12 @@
   height: 100vh;
   display: flex;
   overflow: hidden;
+  font-size: 2.5vmin;
+  font-family: Tahoma, sans-serif;
 }
 .wrapper .headerButton {
   position: absolute;
-  margin: 1vh 1vh;
+  padding-left: 1vmin;
   width: 50px;
   min-width: 50px;
   z-index: 100;
@@ -26,7 +28,7 @@
   height: inherit;
   flex: 1;
   background: #efefef;
-  padding: 2vh;
+  padding: 1.5vmin;
   border-radius: 10px;
   min-height: 100vh;
   box-sizing: border-box;
@@ -35,27 +37,34 @@
 
 @media (orientation: landscape) {
   .wrapper .header {
-    width: calc(1vh + 50px);
+    width: calc(1vmin + 50px);
     visibility: hidden;
     transition: width 0.3s;
-    margin-right: 1vh;
+    margin-right: 1vmin;
   }
   .wrapper .activeHeader {
     width: 300px;
     visibility: visible;
   }
 }
-@media screen and (max-width: 1080px) and (orientation: landscape) {
-  .wrapper .header {
-    position: absolute;
-  }
-  .wrapper .content {
-    margin-left: calc(2vh + 50px);
+.mobile .header {
+  position: absolute;
+}
+.mobile .content {
+  font-size: 1.6em;
+}
+@media (orientation: landscape) {
+  .mobile .content {
+    margin-left: calc(2vmin + 50px);
   }
 }
+.mobile #findContentLine {
+  width: 100%;
+}
+
 @media screen and (min-width: 1200px) and (orientation: landscape) {
   .wrapper {
-    padding-right: calc(50px + 1vh);
+    padding-right: calc(50px + 2vmin);
   }
 }
 @media (orientation: portrait) {
@@ -68,10 +77,10 @@
     width: 100%;
   }
   .wrapper .content {
-    margin-top: calc(2vh + 50px);
-    padding-bottom: calc(2vh + 50px);
+    margin-top: 50px;
+    padding-bottom: 50px;
     box-sizing: border-box;
   }
 }
 
-/*# sourceMappingURL=App.module.css.map */
+/*# sourceMappingURL=App.css.map */

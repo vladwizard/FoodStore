@@ -1,13 +1,11 @@
 .wrapper {
     box-sizing: border-box;
-    margin: 5px 0;
     background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 10px;
 
-    font-size: 1.6rem;
 }
 .wrapper img {
     width: 75%;
@@ -15,20 +13,18 @@
     max-height: 400px;
     display: block;
 }
+
 .user_settings {
     margin-top: auto;
-    width: 90%;
-
-    grid-gap: 10px;
-    padding-bottom: 15px;
+    padding: 0 0 2vw 0;
+    grid-gap: 0.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.user_settings > *:not(:last-child){
-    margin-bottom: 5px;
-}
+
 .title{
+    width: 90%;
     text-align: center;
     font-size: 1.1em;
 }
@@ -42,10 +38,10 @@
 .portion_area button {
     font-size: 0.9em;
     border: none;
-    border-radius: 15px;
+    border-radius: calc(0.7vw + 7px);
     background-color: palegoldenrod;
     color: white;
-    padding: 8px 15px;
+    padding: 1.25vmin 2.5vmin;
     cursor: pointer;
 
 }
@@ -76,30 +72,25 @@
     background: sandybrown;
 }
 
-.addcart_button {
-    border-radius: 10px;
-    border: none;
-    padding: 4px 10px;
-    font-size: 0.8em;
-    margin-left: auto;
-    background: lightgray;
-    color: white;
-}
-
-.addcart_button:hover {
-    background:sandybrown;
-}
-
-.addcart_button:active {
-
-    background: lightgreen;
-}
-
-.bottom_area p{
+.bottom_area > p{
     font-size: 1.5em;
 }
 .bottom_area{
     display: flex;
-    width: 90%;
-
+    width: 85%;
+    justify-content: space-between;
+    button {
+        border-radius: 10px;
+        border: none;
+        padding: 4px 10px;
+        font-size: 0.8em;
+        background: lightgray;
+        color: white;
+    }
+    button:hover {
+        background:sandybrown;
+    }
+    button:active {
+        background: lightgreen;
+    }
 }

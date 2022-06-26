@@ -16,14 +16,14 @@ export default function FoodBlock({food}) {
                 <p className={style.title}>{food.title}</p>
                 {
                     food.notation == "граммы" ?
-                            <div className={style.portion_area}>
-                                {food.portionsizes.map((portion, i) => <button
-                                    className={i == portionSize ? style.active : ""}
-                                    onClick={() => setPortion(i)}
-                                    key={i}>
+                        <div className={style.portion_area}>
+                            {food.portionsizes.map((portion, i) => <button
+                                className={i == portionSize ? style.active : ""}
+                                onClick={() => setPortion(i)}
+                                key={i}>
 
-                                    {portion + "гр"} </button>)}
-                            </div>
+                                {portion + "гр"} </button>)}
+                        </div>
                         : ""
                 }
                 <div className={style.count_area}>
@@ -33,13 +33,12 @@ export default function FoodBlock({food}) {
                 </div>
                 <div className={style.bottom_area}>
                     <p>{food.prices[portionSize] * count} ₽</p>
-                    <button className={style.addcart_button} onClick={() => {
+                    <button onClick={() => {
                         dispatch(addToCart([
                                 food,
                                 portionSize
                             ]
                         ));
-                        // setPortion(0);
                         setCount(1)
                     }}>
                         Добавить

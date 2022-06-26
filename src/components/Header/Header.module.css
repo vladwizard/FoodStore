@@ -1,5 +1,4 @@
 .wrapper * {
-
     display: grid;
     overflow: hidden;
     border-radius: 5px;
@@ -7,16 +6,12 @@
 }
 
 .wrapper {
-
     padding:calc(1vh + 50px) 10px 0 10px;
-    /*padding:10px 10px 0 10px;*/
-
-    font-size: 15px;
+    font-size: 0.9rem;
 }
 
 .wrapper .link {
     margin-bottom: 12px;
-    /*margin-left: calc(1vh + 50px);*/
     padding: 9px 10px 15px 10px;
     text-decoration: none;
     line-height: 15px;
@@ -55,7 +50,6 @@
 }
 .price_area *{
     margin-bottom: 12px;
-    /*padding: 4px 7vh;*/
     background: white;
     font-size: 1.4em;
     padding-left: 10px;
