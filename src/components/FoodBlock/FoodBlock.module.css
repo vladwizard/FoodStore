@@ -58,30 +58,30 @@
 .count_area {
   display: flex;
   align-items: center;
-}
-
-.count_area {
   font-size: 1.4em;
 }
 
-.count_area > div {
+.count_area > .text {
   min-width: 1.5em;
   width: max-content;
   display: flex;
   justify-content: center;
 }
 
-.count_area button {
+.count_area > .button {
   font-size: 0.9em;
   border: none;
   background-color: #cfcfcf;
   color: white;
-  padding: calc(0.2vmin + 3px) calc(1.5vmin + 20px);
+  padding: calc(0.2vmin + 3px) calc(1.5vmin + 15px);
   border-radius: calc(0.2vw + 12px);
   cursor: pointer;
 }
+.count_area > .button p {
+  transform: translate(-0.05em, -0.05em);
+}
 
-.count_area button:hover {
+.count_area > .button:active {
   background: sandybrown;
 }
 
