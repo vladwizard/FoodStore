@@ -1,5 +1,6 @@
+
 .wrapper button{
-    border-radius: calc(0.1vw + 15px);
+    border-radius: calc(0.1vw + 10px);
 }
 
 .wrapper {
@@ -46,7 +47,8 @@
 
     background-color: palegoldenrod;
     color: white;
-    padding: calc( 8px) calc( 12px);
+    padding: calc(0.4vmin + 6px) calc( 0.6vmin + 7px);
+
     cursor: pointer;
 
 }
@@ -73,11 +75,12 @@
     font-size: 0.9em;
     border: none;
 
-    background-color: #cfcfcf; /* Green background */
-    color: white; /* White text */
+    background-color: #cfcfcf;
+    color: white;
 
-    padding: 3px 23px;
-    cursor: pointer; /* Pointer/hand icon */
+    padding: calc(0.2vmin + 3px) calc( 1.5vmin + 20px);
+    border-radius: calc(0.2vw + 14px);
+    cursor: pointer;
 }
 
 .count_area button:hover {
@@ -89,12 +92,13 @@
 }
 .bottom_area{
     display: flex;
-    width: 85%;
+    min-width: 80%;
     justify-content: space-between;
+    align-items: center;
     button {
 
         border: none;
-        padding: 1vmin 2vmin;
+        padding: calc(0.6vmin + 5px) calc(1.2vmin + 8px);
         font-size: 1em;
         background: lightgray;
         color: white;
