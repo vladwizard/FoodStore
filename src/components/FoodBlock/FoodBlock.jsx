@@ -28,7 +28,7 @@ export default function FoodBlock({food}) {
                 }
                 <div className={style.count_area}>
                     <button onClick={() => count > 1 ? setCount(count - 1) : ""}>&lt;</button>
-                    <p>{count}</p>
+                    <div><p>{count}</p></div>
                     <button onClick={() => setCount(count + 1)}>&gt;</button>
                 </div>
                 <div className={style.bottom_area}>

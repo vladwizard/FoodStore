@@ -1,3 +1,7 @@
+.wrapper button{
+    border-radius: calc(0.1vw + 15px);
+}
+
 .wrapper {
     box-sizing: border-box;
     background: white;
@@ -16,11 +20,12 @@
 
 .user_settings {
     margin-top: auto;
-    padding: 0 0 2vw 0;
+    padding: 0 0 calc(0.5vw + 5px) 0;
     grid-gap: 0.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .title{
@@ -36,12 +41,12 @@
     text-align: center;
 }
 .portion_area button {
-    font-size: 0.9em;
+    font-size: 1.1em;
     border: none;
-    border-radius: calc(0.7vw + 7px);
+
     background-color: palegoldenrod;
     color: white;
-    padding: 1.25vmin 2.5vmin;
+    padding: calc( 8px) calc( 12px);
     cursor: pointer;
 
 }
@@ -55,15 +60,22 @@
 
     align-items: center;
 }
-.count_area *{
-    font-size: 1.2em;
+.count_area {
+    font-size: 1.4em;
+}
+.count_area > div {
+    min-width: 1.5em;
+    width: max-content;
+    display: flex;
+    justify-content: center;
 }
 .count_area button {
+    font-size: 0.9em;
     border: none;
-    border-radius: 100px;
+
     background-color: #cfcfcf; /* Green background */
     color: white; /* White text */
-    margin: 0 15px;
+
     padding: 3px 23px;
     cursor: pointer; /* Pointer/hand icon */
 }
@@ -80,10 +92,10 @@
     width: 85%;
     justify-content: space-between;
     button {
-        border-radius: 10px;
+
         border: none;
-        padding: 4px 10px;
-        font-size: 0.8em;
+        padding: 1vmin 2vmin;
+        font-size: 1em;
         background: lightgray;
         color: white;
     }

@@ -4,7 +4,7 @@
   height: 100vh;
   display: flex;
   overflow: hidden;
-  font-size: 2.5vmin;
+  font-size: 1.4rem;
   font-family: Tahoma, sans-serif;
 }
 .wrapper .headerButton {

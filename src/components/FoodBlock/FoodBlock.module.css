@@ -1,0 +1,110 @@
+.wrapper button {
+  border-radius: calc(0.1vw + 15px);
+}
+
+.wrapper {
+  box-sizing: border-box;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.wrapper img {
+  width: 75%;
+  max-width: 400px;
+  max-height: 400px;
+  display: block;
+}
+
+.user_settings {
+  margin-top: auto;
+  padding: 0 0 calc(0.5vw + 5px) 0;
+  grid-gap: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  width: 90%;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.portion_area {
+  min-width: 80%;
+  width: max-content;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.portion_area button {
+  font-size: 1.1em;
+  border: none;
+  background-color: palegoldenrod;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.portion_area .active {
+  background-color: goldenrod;
+}
+
+.count_area {
+  display: flex;
+  align-items: center;
+}
+
+.count_area {
+  font-size: 1.4em;
+}
+
+.count_area > div {
+  min-width: 1.5em;
+  width: max-content;
+  display: flex;
+  justify-content: center;
+}
+
+.count_area button {
+  font-size: 0.9em;
+  border: none;
+  background-color: #cfcfcf; /* Green background */
+  color: white; /* White text */
+  padding: 3px 23px;
+  cursor: pointer; /* Pointer/hand icon */
+}
+
+.count_area button:hover {
+  background: sandybrown;
+}
+
+.bottom_area > p {
+  font-size: 1.5em;
+}
+
+.bottom_area {
+  display: flex;
+  width: 85%;
+  justify-content: space-between;
+}
+.bottom_area button {
+  border: none;
+  padding: 1vmin 2vmin;
+  font-size: 1em;
+  background: lightgray;
+  color: white;
+}
+.bottom_area button:hover {
+  background: sandybrown;
+}
+.bottom_area button:active {
+  background: lightgreen;
+}
+
+/*# sourceMappingURL=FoodBlock.module.css.map */
