@@ -44,12 +44,13 @@ export default function Home() {
     const refreshGrid = () => {
 
         let contentWidth = parseFloat(window.getComputedStyle(contentRef.current).width);
-        let cellWidth = (330 + contentWidth * 0.01);
+        let gridGap = contentWidth * 0.005 + 7;
+        let cellWidth = (330 + gridGap);
         // console.log(contentWidth, cellWidth, contentWidth / cellWidth, window.devicePixelRatio)
         contentRef.current.style.gridTemplateColumns = 'repeat(' + Math.floor(
             contentWidth * (isMobile == true ? (window.devicePixelRatio > 2 ? 2 : window.devicePixelRatio) : 1) / cellWidth
         ) + ',1fr)'
-
+        contentRef.current.style.gridGap = gridGap + 'px'
     }
     React.useEffect(() => {
         setTimeout(() => {
