@@ -1,11 +1,13 @@
 import style from "./Cart.module.css";
 import CartBlock from "../../components/CartBlock/CartBlock";
 import {useSelector} from "react-redux";
+import React from "react";
 
+import {RootState} from "../../Redux/store";
 
 export default function Home() {
 
-    const cartMap = useSelector((state) => state.cart.items)
+    const cartMap = useSelector((state:RootState) => state.cart.items)
 
     return (
         <div className={style.content}>
@@ -14,7 +16,7 @@ export default function Home() {
             )}
             {
 
-                [...cartMap.entries()].map((item, index) =>
+                [...Array.from(cartMap.entries())].map((item, index) =>
 
                     <CartBlock item={item} key={index}/>
                 )

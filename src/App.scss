@@ -4,7 +4,7 @@
   height: 100vh;
   display: flex;
   overflow: hidden;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-family: Tahoma, sans-serif;
 
   .headerButton {
@@ -51,7 +51,7 @@
     }
 
     .activeHeader {
-      width: 300px;
+      width: 270px;
       visibility: visible;
     }
 
@@ -81,26 +81,26 @@
     padding-right: calc(50px + 2vmin);
   }
 }
-  @media (orientation: portrait) {
+@media (orientation: portrait) {
 
-    .wrapper {
-      .header {
-        width: 0;
-        position: absolute;
-        overflow: hidden;
-      }
+  .wrapper {
+    .header {
+      width: 0;
+      position: absolute;
+      overflow: hidden;
+    }
 
-      .activeHeader {
-        width: 100%;
-      }
+    .activeHeader {
+      width: 100%;
+    }
 
-      .content {
-        margin-top: calc(50px);
-        padding-bottom: calc(50px);
-        box-sizing: border-box;
-      }
+    .content {
+      margin-top: calc(50px);
+      padding-bottom: calc(50px);
+      box-sizing: border-box;
     }
   }
+}
 
 
 
