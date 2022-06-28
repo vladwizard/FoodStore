@@ -1,10 +1,13 @@
 # FoodStore
 Applications for ordering food, for the backend, the Moskapi service was used, with a stored list of goods, protection against dudos attacks is built-in, through lodash.debounce. Cart purchases are stored in the global storage via Redux.toolkit, add and remove functions are implemented, React.router provides pagination of the application. Backend requests filter products.
 ## Main page
-![Screenshot 2022-06-02 18 38 23](https://user-images.githubusercontent.com/72702845/171667023-9bdced74-dcc5-4e33-9fd1-a7129419dcc7.png)
+![Screenshot 2022-06-28 05 23 55](https://user-images.githubusercontent.com/72702845/176077972-a49eebe9-580f-43fb-a043-23517f0ec9ce.png)
+
 ## Main page with filter
-![Screenshot 2022-06-02 18 37 20](https://user-images.githubusercontent.com/72702845/171666807-e1c5d039-4ab4-4da2-9022-6deb7e5df81e.png)
+![Screenshot 2022-06-28 05 24 29](https://user-images.githubusercontent.com/72702845/176078048-fb90296b-3e6f-46ee-850a-47e6fdec9f41.png)
+
 ## Cart page
-![Screenshot 2022-06-02 18 39 11](https://user-images.githubusercontent.com/72702845/171667221-77f0081c-4fb1-4d1b-bef5-83ee5f53b017.png)
+![Screenshot 2022-06-28 05 24 58](https://user-images.githubusercontent.com/72702845/176078097-2e9c40bb-ca89-4ea1-ba32-0ba750f320de.png)
+
 ## Iphone se screen
-![Screenshot 2022-06-25 07 09 50](https://user-images.githubusercontent.com/72702845/175757498-0a9d8511-c86d-4583-863f-62fdad0d0b38.png)
+![Screenshot 2022-06-28 05 25 52](https://user-images.githubusercontent.com/72702845/176078209-619009fe-b0d0-4628-814d-b4c7de87362c.png)
