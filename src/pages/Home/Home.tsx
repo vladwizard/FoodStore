@@ -19,17 +19,18 @@ export default function Home() {
     );
 
     const [refreshFoodIndex, getBackend] = React.useState(0);
-    const [currentCategory, setCategory] = React.useState(0);
+    const [currentCategory, setCategory] = React.useState(2);
 
     const printCategories: string[] = ['Всё', 'Первое', 'Закуски', 'Десерты', 'Напитки'];
     const backendNameCategories: string[] = ['', 'первое', 'закуска', 'десерт', 'напиток'];
 
     //Запрос на беккенд
     const [foodArray, setFood] = React.useState([]);
+
     React.useEffect(() => {
         axios
             .get(
-                `https://6294876663b5d108c18d5377.mockapi.io/items?${backendNameCategories[currentCategory]}&${find == '' ? '' : `title=${find}`}`
+                `https://6294876663b5d108c18d5377.mockapi.io/items?${'filter='+backendNameCategories[currentCategory]}${find == '' ? '' : `&title=${find}`}`
             )
             .then((res) => {
                     setFood(res.data);
