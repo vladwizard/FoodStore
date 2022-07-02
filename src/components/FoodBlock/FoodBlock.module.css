@@ -1,5 +1,6 @@
 .wrapper button {
   border-radius: calc(0.1vw + 10px);
+  cursor: pointer;
 }
 
 .wrapper {
@@ -35,22 +36,19 @@
 }
 
 .portion_area {
-  min-width: 80%;
-  width: max-content;
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2%;
 }
-
 .portion_area button {
-  font-size: 1.1em;
+  box-sizing: border-box;
+  font-size: 1.2rem;
   border: none;
   background-color: palegoldenrod;
   color: white;
   padding: calc(0.4vmin + 6px) calc(0.6vmin + 7px);
-  cursor: pointer;
 }
-
 .portion_area .active {
   background-color: goldenrod;
 }
