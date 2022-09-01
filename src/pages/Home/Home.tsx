@@ -15,7 +15,7 @@ export default function Home() {
     );
 
     const [refreshFoodIndex, getBackend] = React.useState(0);
-    const [currentCategory, setCategory] = React.useState(2);
+    const [currentCategory, setCategory] = React.useState(0);
 
     const printCategories: string[] = ['Всё', 'Первое', 'Закуски', 'Десерты', 'Напитки'];
     const backendNameCategories: string[] = ['', 'первое', 'закуска', 'десерт', 'напиток'];
