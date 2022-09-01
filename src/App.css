@@ -7,25 +7,19 @@
   font-size: 1.2rem;
   font-family: Tahoma, sans-serif;
 }
-.wrapper .headerButton {
-  position: absolute;
-  padding-left: 1vmin;
-  width: 50px;
-  min-width: 50px;
-  z-index: 100;
+@media (orientation: portrait) {
+  .wrapper {
+    font-size: 0.7em;
+  }
 }
-.wrapper .header {
-  height: inherit;
-  background: #eee;
-  z-index: 0;
-  box-sizing: border-box;
-}
-.wrapper .contentWrapper {
-  height: 100px;
-  background: green;
+@media (orientation: landscape) {
+  .wrapper {
+    flex-direction: column;
+  }
 }
 .wrapper .content {
   height: inherit;
+  width: inherit;
   flex: 1;
   background: #efefef;
   padding: 1.5vmin;
@@ -34,52 +28,9 @@
   box-sizing: border-box;
   overflow: auto;
 }
-
-@media (orientation: landscape) {
-  .wrapper .header {
-    width: calc(1vmin + 50px);
-    visibility: hidden;
-    transition: width 0.3s;
-    margin-right: 1vmin;
-  }
-  .wrapper .activeHeader {
-    width: 270px;
-    visibility: visible;
-  }
-}
-.mobile .header {
-  position: absolute;
-}
-.mobile .content {
-  font-size: 3.5vmin;
-}
-@media (orientation: landscape) {
-  .mobile .content {
-    margin-left: calc(2vmin + 50px);
-  }
-}
-.mobile #findContentLine {
-  width: 100%;
-}
-
-@media screen and (min-width: 1200px) and (orientation: landscape) {
-  .wrapper {
-    padding-right: calc(50px + 2vmin);
-  }
-}
 @media (orientation: portrait) {
-  .wrapper .header {
-    width: 0;
-    position: absolute;
-    overflow: hidden;
-  }
-  .wrapper .activeHeader {
-    width: 100%;
-  }
   .wrapper .content {
-    margin-top: 50px;
-    padding-bottom: 50px;
-    box-sizing: border-box;
+    margin-top: calc(50px + 1vh);
   }
 }
 

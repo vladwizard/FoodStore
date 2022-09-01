@@ -19,6 +19,12 @@
   display: block;
   margin: 0 auto;
 }
+@media (orientation: portrait) {
+  .wrapper img {
+    height: 180px;
+    width: 180px;
+  }
+}
 .wrapper .title {
   padding: 2px 5px 4px 7px;
   font-size: 1.2em;
@@ -53,7 +59,7 @@
 }
 .count_area button {
   border: none;
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding: 5px 10px;
   border-radius: 5px;
   background: #efefef;

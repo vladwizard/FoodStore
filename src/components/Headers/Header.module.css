@@ -1,0 +1,89 @@
+.wrapper {
+  background: #444;
+}
+@media (orientation: landscape) {
+  .wrapper {
+    font-size: 20px;
+    position: relative;
+    padding: 5px 15px;
+  }
+}
+@media (orientation: portrait) {
+  .wrapper {
+    font-size: 1.4em;
+    position: absolute;
+  }
+}
+
+.headerButton {
+  padding: 5px 10px;
+  width: 45px;
+  min-width: 45px;
+  z-index: 100;
+  fill: white;
+}
+@media (orientation: landscape) {
+  .headerButton {
+    display: none;
+  }
+}
+
+.content {
+  overflow: hidden;
+  border-radius: 5px;
+  white-space: nowrap;
+  display: flex;
+}
+@media (orientation: landscape) {
+  .content {
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+  .content > * {
+    display: flex;
+    grid-gap: 10px;
+  }
+}
+@media (orientation: portrait) {
+  .content {
+    padding: 0 15px 10px 15px;
+    flex-direction: column;
+    grid-gap: 15px;
+  }
+  .content > * {
+    flex-direction: column;
+    display: flex;
+    grid-gap: 10px;
+  }
+}
+
+.noneActiveContent {
+  display: none;
+}
+@media (orientation: landscape) {
+  .noneActiveContent {
+    display: flex;
+  }
+}
+
+.content p {
+  font-size: 1.7em;
+  font-weight: 300;
+  color: white;
+  grid-area: b;
+  min-width: 70px;
+}
+
+.wrapper .link {
+  grid-area: a;
+  padding: 0.4em 0.5em 0.5em 0.3em;
+  text-decoration: none;
+  line-height: 15px;
+  font-size: 2.2em;
+  color: lightseagreen;
+  background: white;
+  border-radius: 7px;
+}
+
+/*# sourceMappingURL=Header.module.css.map */

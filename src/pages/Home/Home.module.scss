@@ -1,13 +1,23 @@
 .content {
+
   width: 100%;
   height: 100%;
   border-radius: 15px;
   box-sizing: border-box;
   display: grid;
-  justify-content: space-between;
+  grid-gap: 10px;
+  @media (orientation: landscape) {
+    grid-template-columns: repeat(auto-fill, 280px);
+    justify-content: space-between;
+
+  }
+  @media (orientation: portrait) {
+    grid-template-columns: repeat(2, 48%);
+  }
 }
 
 .header {
+
   border-radius: 10px;
   width: 100%;
   background: white;
@@ -19,7 +29,7 @@
   box-sizing: border-box;
   margin-bottom: 10px;
   flex-wrap: wrap;
-  font-size: 0.8em;
+  font-size: 1em;
   font-weight: bold;
 
   .category_area {
@@ -43,7 +53,10 @@
     font-size: 1.4em;
     width: 30%;
     padding: 3px 6px;
-
+    border-radius: 5px;
+    @media (orientation: portrait) {
+      width: 100%;
+    }
   }
 
   .active {

@@ -3,14 +3,10 @@ import FoodBlock from "../../components/FoodBlock/FoodBlock";
 import axios from "axios";
 import debounce from "lodash.debounce";
 
-import {useSelector} from "react-redux";
 import React from "react";
-
-import {RootState} from "../../Redux/store";
 
 export default function Home() {
 
-    const isMobile: boolean = useSelector((state: RootState) => state.device.isMobile)
 
     const [find, setFind] = React.useState<string>("");
 
@@ -40,30 +36,7 @@ export default function Home() {
 
 
     const contentRef = React.useRef<HTMLDivElement>(null);
-    const refreshGrid = () => {
 
-        let content = contentRef.current as HTMLElement;
-
-        let contentWidth = parseFloat(window.getComputedStyle(content).width);
-        let gridGap = contentWidth * 0.005 + 7;
-        let cellWidth = (240 + gridGap);
-        if (isMobile) {
-            cellWidth = 170;
-        }
-        contentWidth += gridGap;
-        // contentRef.current.style.gridTemplateColumns = 'repeat(' + Math.floor(contentWidth / cellWidth) + ',1fr)'
-        // contentRef.current.style.gridGap = gridGap + 'px'
-        content.style.gridTemplateColumns = 'repeat(' + Math.floor(contentWidth / cellWidth) + ',1fr)'
-        content.style.gridGap = gridGap + 'px'
-    }
-    React.useEffect(() => {
-        setTimeout(() => {
-                refreshGrid()
-            }
-            , 400)
-    }, [contentRef.current != null && window.getComputedStyle(contentRef.current).width])
-
-    window.onresize = () => refreshGrid();
 
     return (
         <div className={style.wrapper}>
