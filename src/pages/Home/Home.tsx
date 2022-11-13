@@ -2,11 +2,11 @@ import style from "./Home.module.css";
 import FoodBlock from "../../components/FoodBlock/FoodBlock";
 import axios from "axios";
 import debounce from "lodash.debounce";
+import {Food} from "../../@types/common";
 
 import React from "react";
 
 export default function Home() {
-
 
     const [find, setFind] = React.useState<string>("");
 
@@ -21,14 +21,15 @@ export default function Home() {
     const backendNameCategories: string[] = ['', 'первое', 'закуска', 'десерт', 'напиток'];
 
     //Запрос на беккенд
-    const [foodArray, setFood] = React.useState([]);
+    const [foodArray, setFood] = React.useState<Food[]>([]);
 
     React.useEffect(() => {
         axios
             .get(
-                `https://6294876663b5d108c18d5377.mockapi.io/items?${'filter='+backendNameCategories[currentCategory]}${find == '' ? '' : `&title=${find}`}`
+                `https://6294876663b5d108c18d5377.mockapi.io/items?${'filter=' + backendNameCategories[currentCategory]}${find == '' ? '' : `&title=${find}`}`
             )
             .then((res) => {
+                    console.log(res)
                     setFood(res.data);
                 }
             )
@@ -36,7 +37,6 @@ export default function Home() {
 
 
     const contentRef = React.useRef<HTMLDivElement>(null);
-
 
     return (
         <div className={style.wrapper}>
@@ -59,8 +59,7 @@ export default function Home() {
                        }}/>
             </div>
             <div className={style.content} ref={contentRef}>
-                {foodArray.map((food, i) => <FoodBlock food={food} key={'food'+i}/>)}
-
+                {foodArray.map((food1, i) => <FoodBlock food={food1} key={'food' + i}/>)}
             </div>
 
         </div>

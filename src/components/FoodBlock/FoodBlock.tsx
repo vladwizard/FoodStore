@@ -2,22 +2,23 @@ import React from "react";
 import style from "./FoodBlock.module.css"
 import {useDispatch} from 'react-redux'
 import {addToCart} from "../../Redux/slices/cartSlice.js";
+import {Food} from "../../@types/common";
 
-export default function FoodBlock({food}) {
+export default function FoodBlock({food}:{food: Food}) {
     const dispatch = useDispatch();
-
+    console.log(food);
     const [count, setCount] = React.useState(1);
     const [portionSize, setPortion] = React.useState(0);
 
     return (
         <div className={style.wrapper}>
             <img src={food.img} alt=""/>
+            <p className={style.title}>{food.title}</p>
             <div className={style.user_settings}>
-                <p className={style.title}>{food.title}</p>
                 {
                     food.notation == "граммы" ?
                         <div className={style.portion_area}>
-                            {food.portionsizes.map((portion, i) => <button
+                            {food.portionsizes.map((portion: string, i: number) => <button
                                 className={i == portionSize ? style.active : ""}
                                 onClick={() => setPortion(i)}
                                 key={i}>
@@ -28,20 +29,24 @@ export default function FoodBlock({food}) {
                 }
                 <div className={style.count_area}>
 
-                    <div className={style.button} onClick={() => count > 1 ? setCount(count - 1) : ""}><p>&lt;</p></div>
+                    <button onClick={() => count > 1 ? setCount(count - 1) : ""}>
+                        <div>-</div>
+                    </button>
 
-                    <div className={style.text} ><p>{count}</p></div>
+                    <p>{count}</p>
 
-                    <div className={style.button} onClick={() => setCount(count + 1)}><p>&gt;</p></div>
+                    <button onClick={() => setCount(count + 1)}>
+                        <div>+</div>
+                    </button>
 
                 </div>
-                <div className={style.bottom_area}>
-                    <p>{food.prices[portionSize] * count} ₽</p>
+                <div className={style.cart_area}>
+                    <p>{+food.prices[portionSize] * count} ₽</p>
                     <button onClick={() => {
-                        dispatch(addToCart([
+                        dispatch(addToCart({
                                 food,
                                 portionSize
-                            ]
+                            }
                         ));
                         setCount(1)
                     }}>

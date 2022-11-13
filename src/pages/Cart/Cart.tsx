@@ -15,9 +15,7 @@ export default function Home() {
                 <div className={style.empty}>Корзина пуста</div>
             )}
             {
-
                 [...Array.from(cartMap.entries())].map((item, index) =>
-
                     <CartBlock item={item} key={index}/>
                 )
             }

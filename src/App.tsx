@@ -14,21 +14,15 @@ function App() {
         <div className={['wrapper'].join(' ')}>
             <Header />
 
-            <div className={'content'}>
+            <Routes>
+                <Route path="/" element={
+                    <Home/>
+                }/>
+                <Route path="/cart" element={
+                    <Cart/>
+                }/>
+            </Routes>
 
-                <Routes>
-                    <Route path="/" element={
-                        <Home/>
-                    }/>
-                    <Route path="/cart" element={
-                        <div>
-                            {
-                                <Cart/>
-                            }
-                        </div>
-                    }/>
-                </Routes>
-            </div>
         </div>
     );
 }

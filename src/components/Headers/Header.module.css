@@ -1,89 +1,37 @@
 .wrapper {
   background: #444;
-}
-@media (orientation: landscape) {
-  .wrapper {
-    font-size: 20px;
-    position: relative;
-    padding: 5px 15px;
-  }
-}
-@media (orientation: portrait) {
-  .wrapper {
-    font-size: 1.4em;
-    position: absolute;
-  }
-}
-
-.headerButton {
-  padding: 5px 10px;
-  width: 45px;
-  min-width: 45px;
-  z-index: 100;
-  fill: white;
-}
-@media (orientation: landscape) {
-  .headerButton {
-    display: none;
-  }
-}
-
-.content {
-  overflow: hidden;
-  border-radius: 5px;
+  font-size: 0.9em;
+  position: relative;
+  padding: 15px 30px;
   white-space: nowrap;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-@media (orientation: landscape) {
-  .content {
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-  }
-  .content > * {
-    display: flex;
-    grid-gap: 10px;
-  }
+.wrapper > * {
+  display: flex;
+  grid-gap: 10px;
 }
-@media (orientation: portrait) {
-  .content {
-    padding: 0 15px 10px 15px;
-    flex-direction: column;
-    grid-gap: 15px;
-  }
-  .content > * {
-    flex-direction: column;
-    display: flex;
-    grid-gap: 10px;
-  }
-}
-
-.noneActiveContent {
-  display: none;
-}
-@media (orientation: landscape) {
-  .noneActiveContent {
-    display: flex;
-  }
-}
-
-.content p {
-  font-size: 1.7em;
+.wrapper p {
+  font-size: 1em;
   font-weight: 300;
   color: white;
-  grid-area: b;
-  min-width: 70px;
+  min-width: 3em;
 }
-
 .wrapper .link {
-  grid-area: a;
   padding: 0.4em 0.5em 0.5em 0.3em;
   text-decoration: none;
   line-height: 15px;
-  font-size: 2.2em;
+  font-size: 1.6em;
   color: lightseagreen;
   background: white;
-  border-radius: 7px;
+  border-radius: 5px;
+}
+
+@media (orientation: portrait) {
+  .possiblyNoneDisplay {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=Header.module.css.map */

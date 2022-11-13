@@ -1,78 +1,41 @@
 .wrapper {
 
     background: #444;
+    font-size: 0.9em;
+    position: relative;
 
-
-    @media (orientation: landscape) {
-        font-size: 20px;
-        position: relative;
-        padding: 5px 15px;
-    }
-    @media (orientation: portrait) {
-        font-size: 1.4em;
-        position: absolute;
-
-    }
-}
-.headerButton {
-
-    padding: 5px 10px;
-    width: 45px;
-    min-width: 45px;
-    z-index: 100;
-    fill: white;
-    @media (orientation: landscape) {
-        display: none;
-    }
-}
-.content{
-
-    overflow: hidden;
-    border-radius: 5px;
+    padding: 15px 30px;
     white-space: nowrap;
     display: flex;
-    @media (orientation: landscape) {
 
-        justify-content: space-between;
-        align-items: center;
-        padding: 5px;
-        > * {
-            display: flex;
-            grid-gap: 10px;
-        }
-    }
-    @media (orientation: portrait) {
-        padding: 0 15px 10px 15px;
-        flex-direction: column;
-        grid-gap: 15px;
-        > * {
-            flex-direction: column;
-            display: flex;
-            grid-gap: 10px;
-        }
-    }
+    justify-content: space-between;
+    align-items: center;
 
-}
-.noneActiveContent{
-    display: none;
-    @media (orientation: landscape) {
+    > * {
         display: flex;
+        grid-gap: 10px;
+    }
+
+    p {
+        font-size: 1em;
+        font-weight: 300;
+        color: white;
+        min-width: 3em;
+    }
+    .link {
+        padding: 0.4em 0.5em 0.5em 0.3em;
+        text-decoration: none;
+        line-height: 15px;
+        font-size: 1.6em;
+        color: lightseagreen;
+        background: white;
+        border-radius: 5px;
     }
 }
-.content p{
-    font-size: 1.7em;
-    font-weight: 300;
-    color: white;
-    grid-area: b;
-    min-width: 70px;
-}
-.wrapper .link {
-    grid-area: a;
-    padding: 0.4em 0.5em 0.5em 0.3em;
-    text-decoration: none;
-    line-height: 15px;
-    font-size: 2.2em;
-    color: lightseagreen;
-    background: white;
-    border-radius: 7px;
+
+
+.possiblyNoneDisplay{
+    @media (orientation: portrait){
+        display: none;
+    }
 }

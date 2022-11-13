@@ -1,63 +1,52 @@
-.wrapper button {
-  border-radius: calc(0.1vw + 10px);
-  cursor: pointer;
-}
-
 .wrapper {
-  box-sizing: border-box;
   background: white;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  border-radius: 10px;
 }
-
 .wrapper img {
   width: 75%;
   max-width: 400px;
   max-height: 400px;
   display: block;
 }
-
-.user_settings {
-  margin-top: auto;
-  padding: 0 0 calc(0.5vw + 5px) 0;
-  grid-gap: 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+.wrapper .user_settings {
+  width: 94%;
+}
+.wrapper .user_settings > * {
+  margin: 10px;
+}
+.wrapper button:active {
+  background: springgreen;
+}
+.wrapper button {
+  border-radius: calc(0.1vw + 5px);
+  padding: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 1em;
+  border: none;
+  background: lightgray;
 }
 
 .title {
-  width: 90%;
+  color: black;
   text-align: center;
   font-size: 1.1em;
 }
 
 .portion_area {
-  width: 90%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2%;
 }
-@media (orientation: portrait) {
-  .portion_area {
-    width: 98%;
-  }
-}
 .portion_area button {
-  box-sizing: border-box;
-  font-size: 1.1em;
-  border: none;
   background-color: palegoldenrod;
-  color: white;
-  padding: calc(0.4vmin + 6px) calc(0.6vmin + 7px);
 }
-@media (orientation: portrait) {
-  .portion_area button {
-    padding: 7px 0;
-  }
+.portion_area button:active {
+  background: goldenrod;
 }
 .portion_area .active {
   background-color: goldenrod;
@@ -66,55 +55,32 @@
 .count_area {
   display: flex;
   align-items: center;
-  font-size: 1.4em;
+  justify-content: center;
+  font-size: 1.2em;
 }
-
-.count_area > .text {
+.count_area > p {
   min-width: 1.5em;
-  width: max-content;
+  color: black;
+  text-align: center;
+}
+.count_area button {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
-.count_area > .button {
-  font-size: 0.9em;
-  border: none;
-  background-color: #cfcfcf;
-  color: white;
-  padding: calc(0.2vmin + 3px) calc(1vmin + 15px);
-  border-radius: calc(0.2vw + 12px);
-  cursor: pointer;
-}
-.count_area > .button p {
-  transform: translate(-0.05em, -0.05em);
-}
-
-.count_area > .button:active {
-  background: sandybrown;
-}
-
-.bottom_area > p {
-  font-size: 1.5em;
-}
-
-.bottom_area {
+.cart_area {
   display: flex;
-  min-width: 80%;
   justify-content: space-between;
   align-items: center;
-}
-.bottom_area button {
-  border: none;
-  padding: calc(0.6vmin + 5px) calc(0.8vmin + 8px);
   font-size: 1em;
-  background: lightgray;
-  color: white;
 }
-.bottom_area button:hover {
-  background: sandybrown;
-}
-.bottom_area button:active {
-  background: lightgreen;
+.cart_area p {
+  font-size: 1.1em;
+  color: black;
 }
 
 /*# sourceMappingURL=FoodBlock.module.css.map */
