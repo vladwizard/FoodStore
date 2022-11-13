@@ -2,13 +2,14 @@
   flex: 1;
 }
 .wrapper > * {
-  margin: 2vmin;
+  margin: 1.4vmin;
 }
 
 .content {
   border-radius: 15px;
   box-sizing: border-box;
   display: grid;
+  font-size: 0.8em;
 }
 @media (orientation: landscape) {
   .content {
@@ -32,7 +33,7 @@
   overflow: hidden;
 }
 .header > * {
-  margin: 2vmin;
+  margin: 1.4vmin;
 }
 @media (orientation: portrait) {
   .header {

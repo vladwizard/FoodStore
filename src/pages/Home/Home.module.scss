@@ -2,7 +2,7 @@
   flex: 1;
 
   > * {
-    margin: 2vmin;
+    margin: 1.4vmin;
   }
 }
 
@@ -10,7 +10,7 @@
   border-radius: 15px;
   box-sizing: border-box;
   display: grid;
-
+  font-size: 0.8em;
   @media (orientation: landscape) {
     grid-gap: 8px;
     grid-template-columns: repeat(auto-fill, 270px);
@@ -31,7 +31,7 @@
   overflow: hidden;
 
   > * {
-    margin: 2vmin;
+    margin: 1.4vmin;
   }
 
   @media (orientation: portrait) {

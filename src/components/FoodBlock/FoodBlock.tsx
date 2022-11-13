@@ -6,7 +6,6 @@ import {Food} from "../../@types/common";
 
 export default function FoodBlock({food}: { food: Food }) {
     const dispatch = useDispatch();
-    console.log(food);
     const [count, setCount] = React.useState(1);
     const [portionSize, setPortion] = React.useState(0);
 

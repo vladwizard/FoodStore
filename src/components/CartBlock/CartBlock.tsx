@@ -11,7 +11,6 @@ export default function FoodBlock({item}: { item: { food: Food, portionMap: Map<
 
     return (
         <div className={style.wrapper}>
-
             <img src={food.img} alt=""/>
             <div className={style.right_area}>
                 <p className={style.title}>{food.title}</p>

@@ -1,9 +1,11 @@
 .content {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1.4vmin;
+    grid-gap: 1.4vmin;
 }
+
 
 .empty {
     font-size: 3em;

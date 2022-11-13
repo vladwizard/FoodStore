@@ -29,7 +29,6 @@ export default function Home() {
                 `https://6294876663b5d108c18d5377.mockapi.io/items?${'filter=' + backendNameCategories[currentCategory]}${find == '' ? '' : `&title=${find}`}`
             )
             .then((res) => {
-                    console.log(res)
                     setFood(res.data);
                 }
             )

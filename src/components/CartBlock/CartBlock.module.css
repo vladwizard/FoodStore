@@ -1,9 +1,4 @@
 .wrapper {
-  margin-bottom: 10px;
-  font-size: 1.1em;
-}
-
-.wrapper {
   background: white;
   height: max-content;
   display: flex;
@@ -27,7 +22,7 @@
 }
 .wrapper .title {
   padding: 2px 5px 4px 7px;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 .wrapper .right_area {
   background: #efefef;
