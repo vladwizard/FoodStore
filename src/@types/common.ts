@@ -7,11 +7,3 @@ export type Food = {
     id: string,
     type: string
 };
-// export type CartItem = {
-//     title:string,
-//     portions:<
-//         string, {
-//                 count:number,
-//                 price:number
-//         }>,
-// };

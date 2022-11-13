@@ -1,15 +1,13 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 import {enableMapSet} from 'immer';
 
+
 enableMapSet();
-
-
 const initialState = {
-    items: new Map(),
+    items: new Map(), //Map(food:map({portion:count}))
     finalPrice: 0,
     size:0
-};
-// type incomingObj = { food: Food, portionSize: number };
+}
 
 export const cartSlice = createSlice({
     name: "cart",
@@ -34,8 +32,8 @@ export const cartSlice = createSlice({
             state.size+=1;
         },
         removeFromCart: (state, action) => {
-            let food = action.payload.food;
-            let portionSize = action.payload.portionSize;
+            let food = action.payload[0];
+            let portionSize = action.payload[1];
 
             if (state.items.get(food).get(portionSize) == 1) {
                 state.items.get(food).delete(portionSize);

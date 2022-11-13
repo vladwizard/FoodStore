@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./FoodBlock.module.css"
 import {useDispatch} from 'react-redux'
-import {addToCart} from "../../Redux/slices/cartSlice.js";
+import {addToCart} from "../../Redux/slices/cartSlice";
 import {Food} from "../../@types/common";
 
 export default function FoodBlock({food}:{food: Food}) {
