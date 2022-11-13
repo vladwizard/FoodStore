@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 import {removeFromCart} from "../../Redux/slices/cartSlice";
 import {Food} from "../../@types/common";
 
-export default function FoodBlock({item}:{item:{food:Food,portionMap:Map<number,number>}}) {
+export default function FoodBlock({item}: { item: { food: Food, portionMap: Map<number, number> } }) {
     const food = item.food;
     const portionMap = item.portionMap;
     const dispatch = useDispatch()
@@ -17,19 +17,19 @@ export default function FoodBlock({item}:{item:{food:Food,portionMap:Map<number,
                 <p className={style.title}>{food.title}</p>
 
                 {Array.from(portionMap.entries()).map(([portion, count], index) =>
-                        <div className={style.count_area} key={index}>
+                    <div className={style.count_area} key={index}>
 
-                            {food.notation == 'граммы' &&<p>{food.portionsizes[portion]}гр</p>}
+                        {food.notation == 'граммы' && <p>{food.portionsizes[portion]}гр</p>}
 
-                            <p>{count}шт</p>
-                            <p>{count * +food.prices[portion]}₽</p>
+                        <p>{count}шт</p>
+                        <p>{count * +food.prices[portion]}₽</p>
 
-                            <button onClick={() => {
-                                dispatch(removeFromCart([food, portion]));
-                            }}>Убрать из<br/>корзины
-                            </button>
-                        </div>
-                    )
+                        <button onClick={() => {
+                            dispatch(removeFromCart([food, portion]));
+                        }}>Убрать из<br/>корзины
+                        </button>
+                    </div>
+                )
                 }
 
             </div>

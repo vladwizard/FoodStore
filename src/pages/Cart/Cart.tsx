@@ -7,7 +7,7 @@ import {RootState} from "../../Redux/store";
 
 export default function Home() {
 
-    const cartMap = useSelector((state:RootState) => state.cart.items)
+    const cartMap = useSelector((state: RootState) => state.cart.items)
 
     return (
         <div className={style.content}>
@@ -16,7 +16,7 @@ export default function Home() {
             )}
             {
                 Array.from(cartMap).map((item, index) =>
-                    <CartBlock item={{food:item[0],portionMap:item[1]}} key={index}/>
+                    <CartBlock item={{food: item[0], portionMap: item[1]}} key={index}/>
                 )
             }
 

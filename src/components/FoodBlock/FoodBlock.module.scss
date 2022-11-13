@@ -20,9 +20,11 @@
       margin: 10px;
     }
   }
+
   button:active {
     background: springgreen;
   }
+
   button {
     border-radius: calc(0.1vw + 5px);
     padding: 5px;
@@ -50,9 +52,11 @@
   button {
     background-color: palegoldenrod;
   }
+
   button:active {
     background: goldenrod;
   }
+
   .active {
     background-color: goldenrod;
   }
@@ -63,6 +67,7 @@
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
+
   > p {
     min-width: 1.5em;
     color: black;
@@ -86,6 +91,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 1em;
+
   p {
     font-size: 1.1em;
     color: black;

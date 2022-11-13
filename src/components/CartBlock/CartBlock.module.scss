@@ -1,76 +1,85 @@
-.wrapper{
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-.wrapper{
-    background: white;
-    height: max-content;
-    display: flex;
-
-    max-width: 800px;
-    width: 100%;
-    border-radius: 10px;
-    img {
-        height: 250px;
-        width: 250px;
-        border-radius: inherit;
-        max-height: 50vh;
-        display: block;
-        margin: 0 auto;
-        @media (orientation: portrait) {
-            height: 180px;
-            width: 180px;
-        }
-    }
-    .title{
-        padding: 2px 5px 4px 7px;
-        font-size: 1.2em;
-    }
-    .right_area {
-        background: #efefef;
-        padding: 5px 15px;
-        margin: 10px;
-        width: 95%;
-        box-sizing: border-box;
-        border-radius: 5px;
-        overflow: auto;
-    }
+.wrapper {
+  margin-bottom: 10px;
+  font-size: 1.1em;
 }
 
+.wrapper {
+  background: white;
+  height: max-content;
+  display: flex;
 
-.count_area{
-    margin-bottom: 5px;
-    width: 100%;
-    box-sizing: border-box;
+  max-width: 800px;
+  width: 100%;
+  border-radius: 10px;
+
+  img {
+    height: 250px;
+    width: 250px;
+    border-radius: inherit;
+    max-height: 50vh;
+    display: block;
+    margin: 0 auto;
+    @media (orientation: portrait) {
+      height: 180px;
+      width: 180px;
+    }
+  }
+
+  .title {
+    padding: 2px 5px 4px 7px;
+    font-size: 1.2em;
+  }
+
+  .right_area {
+    background: #efefef;
     padding: 5px 15px;
-    display: flex;
-    justify-content: space-between;
-    background: white;
+    margin: 10px;
+    width: 95%;
+    box-sizing: border-box;
     border-radius: 5px;
-    * {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-    }
-    *:not(:last-child){
-        margin-bottom: 4px;
-    }
-    button{
-        border: none;
-        font-size: 0.9em;
-        padding: 5px 10px;
-        border-radius: 5px;
-        background: #efefef;
-    }
-    button:hover{
-        background:sandybrown;
-    }
+    overflow: auto;
+  }
 }
+
+
+.count_area {
+  margin-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  border-radius: 5px;
+
+  * {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+  }
+
+  *:not(:last-child) {
+    margin-bottom: 4px;
+  }
+
+  button {
+    border: none;
+    font-size: 0.9em;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #efefef;
+  }
+
+  button:hover {
+    background: sandybrown;
+  }
+}
+
 @media (orientation: portrait) {
-    .wrapper {
-        flex-direction: column;
-        flex-wrap: wrap;
-    }
+  .wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 
 }

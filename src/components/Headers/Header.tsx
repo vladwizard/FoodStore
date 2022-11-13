@@ -12,16 +12,16 @@ export default function Header() {
 
     return (
         <div className={style.wrapper}>
-                <div>
-                    <Link className={style.link} to="/">Главная</Link>
-                    <Link className={style.link} to="/cart">Корзина</Link>
-                </div>
-                <div>
-                    <p className={style.possiblyNoneDisplay}>Товаров в корзине:</p>
+            <div>
+                <Link className={style.link} to="/">Главная</Link>
+                <Link className={style.link} to="/cart">Корзина</Link>
+            </div>
+            <div>
+                <p className={style.possiblyNoneDisplay}>Товаров в корзине:</p>
 
-                    <p>{cartCount}</p>
-                    <p>{finalPrice}₽</p>
-                </div>
+                <p>{cartCount}</p>
+                <p>{finalPrice}₽</p>
+            </div>
         </div>
     )
 }

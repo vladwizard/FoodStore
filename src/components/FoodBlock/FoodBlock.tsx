@@ -4,7 +4,7 @@ import {useDispatch} from 'react-redux'
 import {addToCart} from "../../Redux/slices/cartSlice";
 import {Food} from "../../@types/common";
 
-export default function FoodBlock({food}:{food: Food}) {
+export default function FoodBlock({food}: { food: Food }) {
     const dispatch = useDispatch();
     console.log(food);
     const [count, setCount] = React.useState(1);

@@ -12,7 +12,7 @@ function App() {
 
     return (
         <div className={['wrapper'].join(' ')}>
-            <Header />
+            <Header/>
 
             <Routes>
                 <Route path="/" element={

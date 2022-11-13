@@ -6,13 +6,13 @@ import {Food} from "../../@types/common";
 enableMapSet();
 
 const initialState = {
-    items: new Map<Food, Map<number,number> >(),
+    items: new Map<Food, Map<number, number>>(),
     finalPrice: 0,
-    size:0
+    size: 0
 }
 
 type IncomingItem = {
-    food:Food,
+    food: Food,
     portionSize: number
 }
 export const cartSlice = createSlice({
@@ -23,8 +23,8 @@ export const cartSlice = createSlice({
             let food = action.payload.food;
             let portionSize = action.payload.portionSize;
 
-            let portionMap =state.items.get(food);
-            if (portionMap !=undefined) {
+            let portionMap = state.items.get(food);
+            if (portionMap != undefined) {
                 let portionCount = portionMap.get(portionSize);
                 if (portionCount != undefined) {
                     portionMap.set(portionSize, portionCount + 1)
@@ -37,16 +37,16 @@ export const cartSlice = createSlice({
 
             }
             state.finalPrice += +food.prices[portionSize];
-            state.size+=1;
+            state.size += 1;
         },
         removeFromCart: (state, action) => {
             let food = action.payload[0];
             let portionSize = action.payload[1];
 
-            let portionMap =state.items.get(food);
-            if(portionMap!=undefined) {
+            let portionMap = state.items.get(food);
+            if (portionMap != undefined) {
                 let portionCount = portionMap.get(portionSize);
-                if(portionCount!=undefined) {
+                if (portionCount != undefined) {
                     if (portionCount == 1) {
                         portionMap.delete(portionSize);
                     } else {
@@ -58,7 +58,7 @@ export const cartSlice = createSlice({
                 }
             }
             state.finalPrice -= +food.prices[portionSize];
-            state.size-=1;
+            state.size -= 1;
         }
     }
 })
