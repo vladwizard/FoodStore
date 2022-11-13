@@ -15,8 +15,8 @@ export default function Home() {
                 <div className={style.empty}>Корзина пуста</div>
             )}
             {
-                [...Array.from(cartMap.entries())].map((item, index) =>
-                    <CartBlock item={item} key={index}/>
+                Array.from(cartMap).map((item, index) =>
+                    <CartBlock item={{food:item[0],portionMap:item[1]}} key={index}/>
                 )
             }
 
