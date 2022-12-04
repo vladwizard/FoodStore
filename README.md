@@ -1,5 +1,5 @@
 # FoodStore
-Applications for ordering food, for the backend, the Moskapi service was used, with a stored list of goods, protection against dudos attacks is built-in, through lodash.debounce. Cart purchases are stored in the global storage via Redux.toolkit, add and remove functions are implemented, React.router provides pagination of the application. Backend requests filter products.
+Application for ordering food, for the backend, the Moskapi service was used, with a stored list of goods, protection against dudos attacks is built-in, through lodash.debounce. Cart purchases are stored in the global storage via Redux.toolkit, add and remove functions are implemented, React.router provides pagination of the application. Backend requests filter products.
 ## Main page
 ![Screenshot 2022-11-13 11 46 06](https://user-images.githubusercontent.com/72702845/201513503-accb3566-0415-4140-b93e-7be6377b321e.png)
 
