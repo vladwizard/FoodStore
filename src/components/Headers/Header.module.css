@@ -14,15 +14,17 @@
     padding: 8px 10px;
   }
 }
-.wrapper > * {
-  display: flex;
-  grid-gap: 10px;
-}
 .wrapper .cartDescription {
+  display: inherit;
+  grid-gap: 30px;
   font-size: 1.1em;
   font-weight: 300;
   color: white;
   min-width: 3em;
+}
+.wrapper > * {
+  display: inherit;
+  grid-gap: 10px;
 }
 .wrapper .link {
   font-family: "Rubik Mono One", sans-serif;
@@ -32,7 +34,7 @@
   background: white;
   border-radius: 5px;
 }
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   .wrapper .link {
     -webkit-text-stroke: 1px #000000;
     -webkit-text-fill-color: transparent;
@@ -43,10 +45,13 @@
     box-shadow: 0px 0px 6px 3px aquamarine;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 700px) {
   .wrapper .link {
-    font-size: 1.2em;
+    font-size: 1.3em;
     color: aquamarine;
+  }
+  .wrapper .cartDescription {
+    font-size: 1.3em;
   }
 }
 
