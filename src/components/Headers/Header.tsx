@@ -11,17 +11,16 @@ export default function Header() {
     const finalPrice: number = useSelector((state: RootState) => state.cart.finalPrice)
 
     return (
-        <div className={style.wrapper}>
+        <header className={style.wrapper}>
             <div>
                 <Link className={style.link} to="/">Главная</Link>
                 <Link className={style.link} to="/cart">Корзина</Link>
             </div>
-            <div>
+            <div className={style.cartDescription}>
                 <p className={style.possiblyNoneDisplay}>Товаров в корзине:</p>
-
                 <p>{cartCount}</p>
-                <p>{finalPrice}₽</p>
+                <p>{finalPrice+'₽'}</p>
             </div>
-        </div>
+        </header>
     )
 }

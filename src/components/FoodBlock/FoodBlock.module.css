@@ -25,47 +25,40 @@
 .wrapper button {
   border-radius: calc(0.1vw + 5px);
   padding: 5px;
-  cursor: pointer;
   color: white;
   font-size: 1.1em;
   border: none;
   background: lightgray;
 }
-
-.title {
+.wrapper .title {
   color: black;
   text-align: center;
   font-size: 1.15em;
 }
-
-.portion_area {
+.wrapper .portion_area {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2%;
 }
-.portion_area button {
+.wrapper .portion_area button {
   color: black;
   background-color: palegoldenrod;
 }
-.portion_area button:active {
-  background: goldenrod;
-}
-.portion_area .active {
+.wrapper .portion_area .active {
   background-color: goldenrod;
 }
-
-.count_area {
+.wrapper .count_area {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.2em;
 }
-.count_area > p {
+.wrapper .count_area > p {
   min-width: 1.5em;
   color: black;
   text-align: center;
 }
-.count_area button {
+.wrapper .count_area button {
   width: 1.5em;
   height: 1.5em;
   border-radius: 100%;
@@ -73,14 +66,13 @@
   align-items: center;
   justify-content: center;
 }
-
-.cart_area {
+.wrapper .cart_area {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1em;
 }
-.cart_area p {
+.wrapper .cart_area p {
   font-size: 1.1em;
   color: black;
 }

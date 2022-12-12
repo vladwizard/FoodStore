@@ -29,73 +29,66 @@
   button {
     border-radius: calc(0.1vw + 5px);
     padding: 5px;
-    cursor: pointer;
     color: white;
     font-size: 1.1em;
     border: none;
     background: lightgray;
 
   }
-}
-
-.title {
-  color: black;
-  text-align: center;
-  font-size: 1.15em;
-}
-
-.portion_area {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 2%;
-
-  button {
-    color: black;
-    background-color: palegoldenrod;
-  }
-
-  button:active {
-    background: goldenrod;
-  }
-
-  .active {
-    background-color: goldenrod;
-  }
-}
-
-.count_area {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
-
-  > p {
-    min-width: 1.5em;
+  .title {
     color: black;
     text-align: center;
+    font-size: 1.15em;
+  }
+  .portion_area {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2%;
+
+    button {
+      color: black;
+      background-color: palegoldenrod;
+    }
+
+    .active {
+      background-color: goldenrod;
+    }
   }
 
-  button {
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 100%;
-
+  .count_area {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.2em;
+
+    > p {
+      min-width: 1.5em;
+      color: black;
+      text-align: center;
+    }
+
+    button {
+      width: 1.5em;
+      height: 1.5em;
+      border-radius: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
-}
 
 
-.cart_area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 1em;
+  .cart_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1em;
 
-  p {
-    font-size: 1.1em;
-    color: black;
+    p {
+      font-size: 1.1em;
+      color: black;
+    }
+
   }
-
 }

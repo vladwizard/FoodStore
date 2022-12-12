@@ -31,19 +31,18 @@
   display: flex;
   justify-content: space-between;
   overflow: hidden;
-}
-.header > * {
-  margin: 1.4vmin;
+  padding: 0.45em;
 }
 @media (orientation: portrait) {
   .header {
     flex-direction: column;
+    grid-gap: 0.45em;
   }
 }
 .header .category_area {
   display: flex;
   align-items: center;
-  grid-gap: 10px;
+  grid-gap: 0.45em;
   overflow: auto;
   width: 100%;
 }
@@ -55,6 +54,9 @@
   padding: 5px 7px;
   border-radius: 5px;
   border: none;
+}
+.header .category_area button:hover {
+  background: navajowhite;
 }
 .header .category_area .active {
   background: navajowhite;

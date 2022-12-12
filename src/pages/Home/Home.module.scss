@@ -30,19 +30,19 @@
   justify-content: space-between;
   overflow: hidden;
 
-  > * {
-    margin: 1.4vmin;
-  }
+  $space: 0.45em;
+  padding: $space;
 
   @media (orientation: portrait) {
     flex-direction: column;
+    grid-gap: $space;
   }
 
   .category_area {
 
     display: flex;
     align-items: center;
-    grid-gap: 10px;
+    grid-gap: $space;
     overflow: auto;
     width: 100%;
 
@@ -57,6 +57,10 @@
       border-radius: 5px;
       border: none;
 
+    }
+
+    button:hover{
+      background: navajowhite;
     }
 
     .active {

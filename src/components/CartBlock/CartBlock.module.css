@@ -60,7 +60,9 @@
   background: #efefef;
 }
 .count_area button:hover {
-  background: sandybrown;
+  color: white;
+  background: #ff0000;
+  box-shadow: 0 0 5px 2px #ff0000;
 }
 
 @media (orientation: portrait) {

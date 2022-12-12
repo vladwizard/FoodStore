@@ -39,27 +39,27 @@ export default function Home() {
 
     return (
         <div className={style.wrapper}>
-            <div className={style.header}>
+            <header className={style.header}>
                 <div className={style.category_area}>
                     {printCategories.map((str, index) =>
                         <button onClick={() => {
                             setCategory(index)
                         }}
-                                className={index == currentCategory && style.active}
+                                className={index == currentCategory ? style.active:undefined}
                                 key={str}>
                             {str}</button>)}
 
                 </div>
-                <input className={[style.find].join(' ')} id='findContentLine' type='text' value={find}
+                <input className={style.find} id='findContentLine' type='text' value={find}
                        placeholder='Строка поиска'
                        onChange={(e) => {
                            setFind(e.target.value);
                            refreshFood();
                        }}/>
-            </div>
-            <div className={style.content} ref={contentRef}>
+            </header>
+            <main className={style.content} ref={contentRef}>
                 {foodArray.map((food1, i) => <FoodBlock food={food1} key={'food' + i}/>)}
-            </div>
+            </main>
 
         </div>
     )

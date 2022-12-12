@@ -1,5 +1,4 @@
 import React from "react";
-import './App.css';
 import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import Header from "./components/Headers/Header";
@@ -11,7 +10,7 @@ import {
 function App() {
 
     return (
-        <div className={['wrapper'].join(' ')}>
+        <div>
             <Header/>
 
             <Routes>
