@@ -36,6 +36,7 @@
   font-size: 1.15em;
 }
 .wrapper .portion_area {
+  font-size: 1.15em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2%;
@@ -57,7 +58,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 .wrapper .count_area > p {
   min-width: 1.5em;
@@ -76,10 +77,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 .wrapper .cart_area p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   color: black;
 }
 

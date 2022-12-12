@@ -37,17 +37,14 @@ export default function FoodBlock({food}: { food: Food }) {
                     <button onClick={() => setCount(count + 1)}>
                         <div>+</div>
                     </button>
-
                 </div>
                 <div className={style.cart_area}>
                     <p>{+food.prices[portionSize] * count} ₽</p>
                     <button onClick={() => {
-                        dispatch(addToCart({
-                                food,
-                                portionSize
-                            }
-                        ));
-                        setCount(1)
+                        dispatch(
+                            addToCart({food, portionSize, count}
+                            ));
+                        console.log(count)
                     }}>
                         Добавить
                     </button>

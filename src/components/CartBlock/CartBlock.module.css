@@ -33,8 +33,7 @@
   border-radius: 5px;
   overflow: auto;
 }
-
-.count_area {
+.wrapper .count_area {
   margin-bottom: 5px;
   width: 100%;
   box-sizing: border-box;
@@ -44,18 +43,18 @@
   background: white;
   border-radius: 5px;
 }
-.count_area * {
+.wrapper .count_area * {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-.count_area *:not(:last-child) {
+.wrapper .count_area *:not(:last-child) {
   margin-bottom: 4px;
 }
-.count_area button {
+.wrapper .count_area button {
   font-size: 0.9em;
 }
-.count_area button:hover {
+.wrapper .count_area button:hover {
   color: white;
   background: red;
   box-shadow: 0 0 5px 2px red;

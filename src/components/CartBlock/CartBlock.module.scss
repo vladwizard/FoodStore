@@ -34,37 +34,34 @@
     border-radius: 5px;
     overflow: auto;
   }
-}
 
-
-.count_area {
-  margin-bottom: 5px;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 5px 15px;
-  display: flex;
-  justify-content: space-between;
-  background: white;
-  border-radius: 5px;
-
-  * {
+  .count_area {
+    margin-bottom: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 15px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-radius: 5px;
 
-    &:not(:last-child) {
-      margin-bottom: 4px;
+    * {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
     }
+
+    button {
+      font-size: 0.9em;
+      @import "../../common";
+      @include shadowButton(red);
+    }
+
   }
-
-
-
-  button {
-    font-size: 0.9em;
-    @import "../../common";
-    @include shadowButton(red);
-  }
-
 }
 
 @media (orientation: portrait) {

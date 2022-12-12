@@ -68,9 +68,7 @@ export default function Home() {
                                 return <option key={index}>{item}</option>
                             })}
                         </select>
-
                     }
-
 
                 </div>
                 <input className={style.find} id='findContentLine' type='text' value={find}

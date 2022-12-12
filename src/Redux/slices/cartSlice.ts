@@ -13,7 +13,8 @@ const initialState = {
 
 type IncomingItem = {
     food: Food,
-    portionSize: number
+    portionSize: number,
+    count:number
 }
 export const cartSlice = createSlice({
     name: "cart",
@@ -22,22 +23,23 @@ export const cartSlice = createSlice({
         addToCart: (state, action: PayloadAction<IncomingItem>) => {
             let food = action.payload.food;
             let portionSize = action.payload.portionSize;
-
+            let count = action.payload.count;
+            console.log(portionSize,count)
             let portionMap = state.items.get(food);
             if (portionMap != undefined) {
-                let portionCount = portionMap.get(portionSize);
-                if (portionCount != undefined) {
-                    portionMap.set(portionSize, portionCount + 1)
+                let portionIndex = portionMap.get(portionSize);
+                if (portionIndex != undefined) {
+                    portionMap.set(portionSize, portionIndex + count)
 
                 } else {
-                    portionMap.set(portionSize, 1)
+                    portionMap.set(portionSize, count)
                 }
             } else {
-                state.items.set(food, new Map().set(portionSize, 1));
+                state.items.set(food, new Map().set(portionSize, count));
 
             }
-            state.finalPrice += +food.prices[portionSize];
-            state.size += 1;
+            state.finalPrice += +food.prices[portionSize]*count;
+            state.size += count;
         },
         removeFromCart: (state, action) => {
             let food = action.payload[0];
