@@ -53,16 +53,12 @@
   margin-bottom: 4px;
 }
 .count_area button {
-  border: none;
   font-size: 0.9em;
-  padding: 5px 10px;
-  border-radius: 5px;
-  background: #efefef;
 }
 .count_area button:hover {
   color: white;
-  background: #ff0000;
-  box-shadow: 0 0 5px 2px #ff0000;
+  background: red;
+  box-shadow: 0 0 5px 2px red;
 }
 
 @media (orientation: portrait) {

@@ -43,9 +43,15 @@
 .wrapper .portion_area button {
   color: black;
   background-color: palegoldenrod;
+  padding: 5px;
 }
-.wrapper .portion_area .active {
+.wrapper .portion_area button.active {
   background-color: goldenrod;
+}
+.wrapper .portion_area button:hover {
+  color: white;
+  background: goldenrod;
+  box-shadow: 0 0 5px 2px goldenrod;
 }
 .wrapper .count_area {
   display: flex;

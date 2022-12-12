@@ -10,9 +10,9 @@ export default function Home() {
     const cartMap = useSelector((state: RootState) => state.cart.items)
 
     return (
-        <div className={style.content}>
+        <main className={style.content}>
             {cartMap.size == 0 && (
-                <div className={style.empty}>Корзина пуста</div>
+                <h1 className={style.empty}>Корзина пуста</h1>
             )}
             {
                 Array.from(cartMap).map((item, index) =>
@@ -20,7 +20,7 @@ export default function Home() {
                 )
             }
 
-        </div>
+        </main>
 
     )
 

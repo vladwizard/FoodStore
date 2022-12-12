@@ -10,7 +10,7 @@ export default function FoodBlock({food}: { food: Food }) {
     const [portionSize, setPortion] = React.useState(0);
 
     return (
-        <div className={style.wrapper}>
+        <article className={style.wrapper}>
             <img src={food.img} alt=""/>
             <p className={style.title}>{food.title}</p>
             <div className={style.user_settings}>
@@ -53,6 +53,6 @@ export default function FoodBlock({food}: { food: Food }) {
                     </button>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }

@@ -52,26 +52,19 @@
     flex-direction: row;
     align-items: center;
 
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
   }
 
-  *:not(:last-child) {
-    margin-bottom: 4px;
-  }
+
 
   button {
-    border: none;
     font-size: 0.9em;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background: #efefef;
+    @import "../../common";
+    @include shadowButton(red);
   }
 
-  button:hover {
-    color: white;
-    $color: #ff0000;
-    background: $color;
-    box-shadow: 0 0 5px 2px $color;
-  }
 }
 
 @media (orientation: portrait) {

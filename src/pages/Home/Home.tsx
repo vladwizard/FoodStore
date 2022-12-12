@@ -4,7 +4,7 @@ import axios from "axios";
 import debounce from "lodash.debounce";
 import {Food} from "../../@types/common";
 
-import React from "react";
+import React, {useState} from "react";
 
 export default function Home() {
 
@@ -34,20 +34,43 @@ export default function Home() {
             )
     }, [currentCategory, refreshFoodIndex])
 
-
     const contentRef = React.useRef<HTMLDivElement>(null);
 
+    const [isMobile, setIsMobile] = useState(false)
+    const mediaQuery = window.matchMedia('(min-width: 768px)')
+
+    function handleTabletChange(e: any) {
+        let result = e.matches
+        if (result != isMobile) {
+
+            setIsMobile(result)
+        }
+    }
+
+    mediaQuery.addListener(handleTabletChange)
+    handleTabletChange(mediaQuery)
+
     return (
-        <div className={style.wrapper}>
+        <section className={style.wrapper}>
             <header className={style.header}>
                 <div className={style.category_area}>
-                    {printCategories.map((str, index) =>
-                        <button onClick={() => {
-                            setCategory(index)
-                        }}
-                                className={index == currentCategory ? style.active:undefined}
-                                key={str}>
-                            {str}</button>)}
+                    {isMobile ?
+                        printCategories.map((str, index) =>
+                            <button onClick={() => {
+                                setCategory(index)
+                            }}
+                                    className={index == currentCategory ? style.active : undefined}
+                                    key={str}>
+                                {str}</button>)
+                        :
+                        <select className="changingLanguage">
+                            {printCategories.map((item, index) => {
+                                return <option key={index}>{item}</option>
+                            })}
+                        </select>
+
+                    }
+
 
                 </div>
                 <input className={style.find} id='findContentLine' type='text' value={find}
@@ -61,6 +84,6 @@ export default function Home() {
                 {foodArray.map((food1, i) => <FoodBlock food={food1} key={'food' + i}/>)}
             </main>
 
-        </div>
+        </section>
     )
 }

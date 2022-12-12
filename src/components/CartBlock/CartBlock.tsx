@@ -10,7 +10,7 @@ export default function FoodBlock({item}: { item: { food: Food, portionMap: Map<
     const dispatch = useDispatch()
 
     return (
-        <div className={style.wrapper}>
+        <article className={style.wrapper}>
             <img src={food.img} alt=""/>
             <div className={style.right_area}>
                 <p className={style.title}>{food.title}</p>
@@ -32,6 +32,6 @@ export default function FoodBlock({item}: { item: { food: Food, portionMap: Map<
                 }
 
             </div>
-        </div>
+        </article>
     )
 }
