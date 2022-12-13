@@ -1,7 +1,0 @@
-@mixin shadowButton($color){
-  &:hover {
-    color: white;
-    background: $color;
-    box-shadow: 0 0 5px 2px $color;
-  }
-}

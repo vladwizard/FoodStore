@@ -51,8 +51,8 @@ export default function Home() {
     handleTabletChange(mediaQuery)
 
     return (
-        <section className={style.wrapper}>
-            <header className={style.header}>
+        <main className={style.wrapper}>
+            <article className={style.header}>
                 <div className={style.category_area}>
                     {isMobile ?
                         printCategories.map((str, index) =>
@@ -71,17 +71,17 @@ export default function Home() {
                     }
 
                 </div>
-                <input className={style.find} id='findContentLine' type='text' value={find}
+                <input type='search' id='findContentLine' value={find}
                        placeholder='Строка поиска'
                        onChange={(e) => {
                            setFind(e.target.value);
                            refreshFood();
                        }}/>
-            </header>
-            <main className={style.content} ref={contentRef}>
+            </article>
+            <main ref={contentRef}>
                 {foodArray.map((food1, i) => <FoodBlock food={food1} key={'food' + i}/>)}
             </main>
 
-        </section>
+        </main>
     )
 }
