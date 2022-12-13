@@ -9,9 +9,11 @@
   button{
     background:$buttons;
     color: $discontrastFont;
+
     &:hover{
       color: $contrastFont;
     }
+
   }
   p,h1{
     color: $contrastFont;

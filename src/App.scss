@@ -13,18 +13,19 @@ body {
   margin: 0;
 }
 button{
-  $hoverColor: sringreen;
+  $hoverColor: springgreen;
   box-sizing: border-box;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
 
   &:hover {
-    background: $hoverColor;
+    background: $hoverColor !important;
     box-shadow: 0 0 5px 2px $hoverColor;
   }
   &:active {
     background: $hoverColor;
+    opacity: 0.8;
   }
 }
 

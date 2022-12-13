@@ -58,7 +58,7 @@
   font-size: 1.05em;
 }
 .wrapper .count_area button:hover {
-  background: red;
+  background: red !important;
   box-shadow: 0 0 5px 2px red;
 }
 .wrapper .count_area button.active {

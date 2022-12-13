@@ -33,7 +33,7 @@
   padding: 5px;
 }
 .wrapper .portion_area button:hover {
-  background: goldenrod;
+  background: goldenrod !important;
   box-shadow: 0 0 5px 2px goldenrod;
 }
 .wrapper .portion_area button.active {

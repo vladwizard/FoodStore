@@ -1,6 +1,6 @@
 @mixin defaultRadio($activeColor) {
   &:hover {
-    background: $activeColor;
+    background: $activeColor !important;
     box-shadow: 0 0 5px 2px $activeColor;
   }
   &.active {
