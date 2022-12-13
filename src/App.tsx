@@ -16,7 +16,6 @@ function App() {
     const [darkTheme, setDark] = useState(false)
     return (
         <div className={[darkTheme ? 'darkTheme': 'lightTheme','wrapper'].join(' ')}>
-            <button>123</button>
             <Header setDark={() => setDark(!darkTheme)}/>
             <Routes>
                 <Route path="/" element={
