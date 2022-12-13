@@ -4,7 +4,6 @@
   *{
     font-size: 0.98em;
   }
-  background: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -28,12 +27,7 @@
 
   }
 
-  button:active {
-    background: springgreen;
-  }
-
   .title {
-    color: black;
     text-align: center;
     font-size: 1.1em;
   }
@@ -45,9 +39,8 @@
     grid-gap: 2%;
 
     button {
-      color: black;
       padding: 5px;
-      @include defaultRadio(goldenrod, palegoldenrod)
+      @include defaultRadio(goldenrod)
     }
 
   }
@@ -61,7 +54,7 @@
 
     > p {
       min-width: 1.5em;
-      color: black;
+
       text-align: center;
     }
 
@@ -74,7 +67,6 @@
       align-items: center;
       justify-content: center;
 
-      @extend %grayButton;
     }
   }
 
@@ -83,12 +75,5 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    > p {
-      color: black;
-    }
-    > button {
-      @extend %grayButton;
-    }
   }
 }

@@ -1,0 +1,31 @@
+@mixin createTheme($background,$header,$blocks,$buttons,$contrastFont,$discontrastFont){
+  background: $background;
+  header {
+    background:$header;
+  }
+  article{
+    background:$blocks;
+  }
+  button{
+    background:$buttons;
+    color: $discontrastFont;
+    &:hover{
+      color: $contrastFont;
+    }
+  }
+  p,h1{
+    color: $contrastFont;
+  }
+}
+
+
+
+.lightTheme{
+  @include createTheme(#efefef, #5b5b5b,white,
+          #b5b5b5, #1d1d1d,white);
+}
+.darkTheme{
+  @include createTheme(#575757, #2c2c2c, #363636,
+          #575757, #ffffff, #191919);
+
+}

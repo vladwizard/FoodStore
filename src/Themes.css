@@ -1,0 +1,41 @@
+.lightTheme {
+  background: #efefef;
+}
+.lightTheme header {
+  background: #5b5b5b;
+}
+.lightTheme article {
+  background: white;
+}
+.lightTheme button {
+  background: #b5b5b5;
+  color: white;
+}
+.lightTheme button:hover {
+  color: #1d1d1d;
+}
+.lightTheme p, .lightTheme h1 {
+  color: #1d1d1d;
+}
+
+.darkTheme {
+  background: #575757;
+}
+.darkTheme header {
+  background: #2c2c2c;
+}
+.darkTheme article {
+  background: #363636;
+}
+.darkTheme button {
+  background: #575757;
+  color: #191919;
+}
+.darkTheme button:hover {
+  color: #ffffff;
+}
+.darkTheme p, .darkTheme h1 {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=Themes.css.map */

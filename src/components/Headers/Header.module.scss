@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import "../../commonStyle";
 
 .wrapper {
   background: #444;
@@ -38,6 +39,12 @@
     background: white;
     border-radius: 5px;
   }
+  .cartDescription{
+    align-items: center;
+    > button{
+      font-size: 1.00em;
+    }
+  }
 
   $stroke: 1px;
   @media (min-width: 700px) {
@@ -51,14 +58,23 @@
         box-shadow: 0px 0px 6px 3px aquamarine;
       }
     }
+
   }
   @media (max-width: 700px) {
+    > * {
+      grid-gap: 5px;
+    }
     .link {
+      letter-spacing: -2px;
       font-size: 1.3em;
       color: aquamarine;
     }
     .cartDescription{
       font-size: 1.3em;
+      grid-gap: 10px;
+      > button{
+        padding: 1px;
+      }
     }
   }
 }

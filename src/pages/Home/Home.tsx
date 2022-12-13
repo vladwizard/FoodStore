@@ -52,7 +52,7 @@ export default function Home() {
 
     return (
         <main className={style.wrapper}>
-            <header>
+            <article className={style.header}>
                 <div className={style.category_area}>
                     {isMobile ?
                         printCategories.map((str, index) =>
@@ -77,7 +77,7 @@ export default function Home() {
                            setFind(e.target.value);
                            refreshFood();
                        }}/>
-            </header>
+            </article>
             <main ref={contentRef}>
                 {foodArray.map((food1, i) => <FoodBlock food={food1} key={'food' + i}/>)}
             </main>

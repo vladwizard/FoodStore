@@ -34,6 +34,12 @@
   background: white;
   border-radius: 5px;
 }
+.wrapper .cartDescription {
+  align-items: center;
+}
+.wrapper .cartDescription > button {
+  font-size: 1em;
+}
 @media (min-width: 700px) {
   .wrapper .link {
     -webkit-text-stroke: 1px #000000;
@@ -46,12 +52,20 @@
   }
 }
 @media (max-width: 700px) {
+  .wrapper > * {
+    grid-gap: 5px;
+  }
   .wrapper .link {
+    letter-spacing: -2px;
     font-size: 1.3em;
     color: aquamarine;
   }
   .wrapper .cartDescription {
     font-size: 1.3em;
+    grid-gap: 10px;
+  }
+  .wrapper .cartDescription > button {
+    padding: 1px;
   }
 }
 

@@ -1,40 +1,4 @@
-body {
-  background: #efefef;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: Tahoma, sans-serif;
-  font-size: calc(10px + 0.5208333333vw);
-}
-
-* {
-  padding: 0;
-  margin: 0;
-}
-
-select {
-  box-sizing: border-box;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  background: orange;
-}
-selecthover {
-  opacity: 0.7;
-}
-select:hover {
-  color: white;
-  background: #efefef;
-  opacity: 1;
-  box-shadow: 0 0 5px 2px #efefef;
-}
-select:active {
-  opacity: 1;
-  background: #efefef;
-}
-
 .wrapper {
-  background: white;
   height: max-content;
   display: flex;
   max-width: 800px;
@@ -66,7 +30,6 @@ select:active {
   font-size: 1em;
 }
 .wrapper .right_area {
-  background: #efefef;
   padding: 5px 15px;
   margin: 10px;
   width: 95%;
@@ -81,7 +44,6 @@ select:active {
   padding: 5px 15px;
   display: flex;
   justify-content: space-between;
-  background: white;
   border-radius: 5px;
 }
 .wrapper .count_area * {
@@ -94,23 +56,12 @@ select:active {
 }
 .wrapper .count_area button {
   font-size: 1.05em;
-  box-sizing: border-box;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  background: #efefef;
-}
-.wrapper .count_area buttonhover {
-  opacity: 0.7;
 }
 .wrapper .count_area button:hover {
-  color: white;
   background: red;
-  opacity: 1;
   box-shadow: 0 0 5px 2px red;
 }
-.wrapper .count_area button:active {
-  opacity: 1;
+.wrapper .count_area button.active {
   background: red;
 }
 

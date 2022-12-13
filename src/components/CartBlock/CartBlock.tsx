@@ -16,7 +16,7 @@ export default function FoodBlock({item}: { item: { food: Food, portionMap: Map<
                 <p className={style.title}>{food.title}</p>
 
                 {Array.from(portionMap.entries()).map(([portion, count], index) =>
-                    <div className={style.count_area} key={index}>
+                    <article className={style.count_area} key={index}>
 
                         {food.notation == 'граммы' && <p>{food.portionsizes[portion]+'гр'}</p>}
 
@@ -27,7 +27,7 @@ export default function FoodBlock({item}: { item: { food: Food, portionMap: Map<
                             dispatch(removeFromCart([food, portion]));
                         }}>Убрать из<br/>корзины
                         </button>
-                    </div>
+                    </article>
                 )
                 }
 

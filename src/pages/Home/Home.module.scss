@@ -7,9 +7,8 @@
     margin: 0.60vw;
   }
 
-  > header {
+  .header {
     border-radius: 10px;
-    background: white;
     display: flex;
     justify-content: space-between;
 
@@ -28,7 +27,7 @@
         font-weight: bold;
         padding: 5px 7px;
 
-        @include defaultRadio(orange,#eee);
+        @include defaultRadio(orange);
       }
 
     }
