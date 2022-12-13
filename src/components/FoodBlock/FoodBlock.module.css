@@ -1,11 +1,60 @@
+body {
+  background: #efefef;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Tahoma, sans-serif;
+  font-size: calc(10px + 0.5208333333vw);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper .cart_area > button, .wrapper .count_area button {
+  background: #efefef;
+  color: black;
+}
+.wrapper .cart_area > button:hover, .wrapper .count_area button:hover {
+  background: springgreen;
+  color: white;
+}
+.wrapper .cart_area > button:hover, .wrapper .count_area button:hover {
+  box-shadow: 0px 0px 6px 3px springgreen;
+}
+
+select {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: orange;
+}
+selecthover {
+  opacity: 0.7;
+}
+select:hover {
+  color: white;
+  background: #efefef;
+  opacity: 1;
+  box-shadow: 0 0 5px 2px #efefef;
+}
+select:active {
+  opacity: 1;
+  background: #efefef;
+}
+
 .wrapper {
-  font-size: 1em;
   background: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+}
+.wrapper * {
+  font-size: 0.98em;
 }
 .wrapper img {
   width: 65%;
@@ -22,43 +71,46 @@
 .wrapper button:active {
   background: springgreen;
 }
-.wrapper button {
-  border-radius: calc(0.1vw + 5px);
-  padding: 5px;
-  color: white;
-  font-size: 1.1em;
-  border: none;
-  background: lightgray;
-}
 .wrapper .title {
   color: black;
   text-align: center;
-  font-size: 1.15em;
+  font-size: 1.1em;
 }
 .wrapper .portion_area {
-  font-size: 1.15em;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2%;
 }
 .wrapper .portion_area button {
   color: black;
-  background-color: palegoldenrod;
   padding: 5px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: palegoldenrod;
 }
-.wrapper .portion_area button.active {
-  background-color: goldenrod;
+.wrapper .portion_area buttonhover {
+  opacity: 0.7;
 }
 .wrapper .portion_area button:hover {
   color: white;
   background: goldenrod;
+  opacity: 1;
   box-shadow: 0 0 5px 2px goldenrod;
 }
+.wrapper .portion_area button:active {
+  opacity: 1;
+  background: goldenrod;
+}
+.wrapper .portion_area button.active {
+  background: goldenrod;
+}
 .wrapper .count_area {
+  font-size: 1.2em;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4em;
 }
 .wrapper .count_area > p {
   min-width: 1.5em;
@@ -77,10 +129,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2em;
 }
-.wrapper .cart_area p {
-  font-size: 1.2em;
+.wrapper .cart_area > p {
   color: black;
 }
 

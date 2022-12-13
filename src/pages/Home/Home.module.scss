@@ -1,11 +1,13 @@
+@import "../../commonStyle";
+
 .wrapper {
   flex: 1;
 
   > * {
-    margin: 1.4vmin;
+    margin: 0.60vw;
   }
 
-  .header {
+  > header {
     border-radius: 10px;
     background: white;
     display: flex;
@@ -17,31 +19,21 @@
 
 
     .category_area {
-
       display: flex;
       align-items: center;
       grid-gap: $space;
 
-      button {
-        background: #eee;
-        color: #333;
-
+      > button {
         font-size: 1em;
         font-weight: bold;
         padding: 5px 7px;
 
-        $color:orange;
-        @import "../../common";
-        @include shadowButton($color);
-        &.active {
-          color: white;
-          background: $color;
-        }
+        @include defaultRadio(orange,#eee);
       }
 
     }
 
-    .find {
+    > input[type='search'] {
       font-size: 1em;
       border-radius: 5px;
       padding: 2px 4px;
@@ -49,17 +41,15 @@
       max-width: 300px;
     }
 
-
   }
 
-  .content {
+  > main {
     border-radius: 15px;
     box-sizing: border-box;
     display: grid;
-    font-size: 0.8em;
 
     grid-gap: 2vmin 2%;
-    grid-template-columns: repeat(auto-fill, minmax(calc(130px + (100vw / 1920) * 130),1fr));
+    grid-template-columns: repeat(auto-fill, minmax(calc(130px + (100vw / 1920) * 130), 1fr));
 
   }
 }

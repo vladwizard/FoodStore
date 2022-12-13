@@ -12,19 +12,32 @@ body {
   margin: 0;
 }
 
-button, select {
+select {
   box-sizing: border-box;
   border: none;
-  background: #efefef;
   border-radius: 5px;
   padding: 5px 10px;
+  background: #efefef;
 }
-button:hover, select:hover {
+selecthover {
   opacity: 0.7;
-  cursor: pointer;
 }
-button.active, button:active, select.active, select:active {
+select:active {
   opacity: 1;
 }
 
-/*# sourceMappingURL=index.css.map */
+button {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: #efefef;
+}
+buttonhover {
+  opacity: 0.7;
+}
+button:active {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=commonStyle.css.map */

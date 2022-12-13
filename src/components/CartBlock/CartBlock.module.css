@@ -1,3 +1,38 @@
+body {
+  background: #efefef;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Tahoma, sans-serif;
+  font-size: calc(10px + 0.5208333333vw);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+select {
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: orange;
+}
+selecthover {
+  opacity: 0.7;
+}
+select:hover {
+  color: white;
+  background: #efefef;
+  opacity: 1;
+  box-shadow: 0 0 5px 2px #efefef;
+}
+select:active {
+  opacity: 1;
+  background: #efefef;
+}
+
 .wrapper {
   background: white;
   height: max-content;
@@ -5,6 +40,12 @@
   max-width: 800px;
   width: 100%;
   border-radius: 10px;
+}
+@media (orientation: portrait) {
+  .wrapper {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 .wrapper img {
   height: 250px;
@@ -52,19 +93,25 @@
   margin-bottom: 4px;
 }
 .wrapper .count_area button {
-  font-size: 0.9em;
+  font-size: 1.05em;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: #efefef;
+}
+.wrapper .count_area buttonhover {
+  opacity: 0.7;
 }
 .wrapper .count_area button:hover {
   color: white;
   background: red;
+  opacity: 1;
   box-shadow: 0 0 5px 2px red;
 }
-
-@media (orientation: portrait) {
-  .wrapper {
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
+.wrapper .count_area button:active {
+  opacity: 1;
+  background: red;
 }
 
 /*# sourceMappingURL=CartBlock.module.css.map */
