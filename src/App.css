@@ -11,11 +11,17 @@ body {
   margin: 0;
 }
 
+button, select {
+  padding: 5px 10px;
+}
+
+select {
+  border-radius: 5px;
+}
+
 button {
   box-sizing: border-box;
   border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
 }
 button:hover {
   background: springgreen !important;
