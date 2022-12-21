@@ -9,14 +9,13 @@ body {
 * {
   padding: 0;
   margin: 0;
+  font-size: 1em;
+  line-height: 1em;
 }
 
-button, select {
+button, select, a {
   padding: 5px 10px;
-}
-
-select {
-  border-radius: 5px;
+  border-radius: calc(3px + 0.15625vw);
 }
 
 button {
@@ -34,6 +33,10 @@ button:active {
 
 .wrapper {
   min-height: 100vh;
+}
+
+article {
+  border-radius: 8px;
 }
 
 /*# sourceMappingURL=App.css.map */

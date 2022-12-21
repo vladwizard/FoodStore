@@ -1,79 +1,77 @@
 @import "../../commonStyle";
 
-.wrapper {
-  *{
-    font-size: 0.98em;
-  }
+.foodBlock {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 
-  img {
+  padding: 0 4% 4% 4%;
+  box-sizing: border-box;
+  > img {
     width: 65%;
     max-width: 300px;
     max-height: 300px;
-    display: block;
+    border-radius: inherit;
+  }
+  > main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 8px;
+  }
+}
+
+
+.title {
+  text-align: center;
+  font-size: 1.1em;
+}
+
+.portion_area {
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2%;
+  width: 100%;
+  button {
+    padding: 5px;
+    @include defaultRadio(goldenrod)
   }
 
-  .user_settings {
-    width: 94%;
+}
 
-    > * {
-      margin: 8px;
+.count_area {
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    }
+  > p {
+    min-width: 1.5em;
 
-  }
-
-  .title {
     text-align: center;
-    font-size: 1.1em;
   }
 
-  .portion_area {
+  button {
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 100%;
 
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2%;
-
-    button {
-      padding: 5px;
-      @include defaultRadio(goldenrod)
-    }
-
-  }
-
-  .count_area {
-    font-size: 1.2em;
     display: flex;
     align-items: center;
     justify-content: center;
 
-
-    > p {
-      min-width: 1.5em;
-
-      text-align: center;
-    }
-
-    button {
-      width: 1.5em;
-      height: 1.5em;
-      border-radius: 100%;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-    }
   }
+}
 
 
-  .cart_area {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+.cart_area {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

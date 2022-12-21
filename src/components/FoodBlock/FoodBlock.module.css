@@ -1,55 +1,60 @@
-.wrapper {
+.foodBlock {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 0 4% 4% 4%;
+  box-sizing: border-box;
 }
-.wrapper * {
-  font-size: 0.98em;
-}
-.wrapper img {
+.foodBlock > img {
   width: 65%;
   max-width: 300px;
   max-height: 300px;
-  display: block;
+  border-radius: inherit;
 }
-.wrapper .user_settings {
-  width: 94%;
+.foodBlock > main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  grid-gap: 8px;
 }
-.wrapper .user_settings > * {
-  margin: 8px;
-}
-.wrapper .title {
+
+.title {
   text-align: center;
   font-size: 1.1em;
 }
-.wrapper .portion_area {
+
+.portion_area {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2%;
+  width: 100%;
 }
-.wrapper .portion_area button {
+.portion_area button {
   padding: 5px;
 }
-.wrapper .portion_area button:hover {
+.portion_area button:hover {
   background: goldenrod !important;
   box-shadow: 0 0 5px 2px goldenrod;
 }
-.wrapper .portion_area button.active {
+.portion_area button.active {
   background: goldenrod;
 }
-.wrapper .count_area {
+
+.count_area {
   font-size: 1.2em;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.wrapper .count_area > p {
+.count_area > p {
   min-width: 1.5em;
   text-align: center;
 }
-.wrapper .count_area button {
+.count_area button {
   width: 1.5em;
   height: 1.5em;
   border-radius: 100%;
@@ -57,7 +62,9 @@
   align-items: center;
   justify-content: center;
 }
-.wrapper .cart_area {
+
+.cart_area {
+  width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;

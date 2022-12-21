@@ -1,20 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
-.wrapper {
-  background: #444;
+.mainHeader {
   width: 100%;
   box-sizing: border-box;
   padding: 12px 25px;
-  white-space: nowrap;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 @media (max-width: 900px) {
-  .wrapper {
+  .mainHeader {
     padding: 8px 10px;
   }
 }
-.wrapper .cartDescription {
+.mainHeader .cartDescription {
   display: inherit;
   grid-gap: 30px;
   font-size: 1.1em;
@@ -22,49 +20,46 @@
   color: white;
   min-width: 3em;
 }
-.wrapper > * {
+.mainHeader p {
+  color: white;
+}
+.mainHeader > * {
   display: inherit;
   grid-gap: 10px;
+  align-items: center;
 }
-.wrapper .link {
+.mainHeader a {
   font-family: "Rubik Mono One", sans-serif;
   padding: 0.2em 0.3em 0.1em 0.25em;
   text-decoration: none;
   font-size: 1.4em;
   background: white;
-  border-radius: 5px;
-}
-.wrapper .cartDescription {
-  align-items: center;
-}
-.wrapper .cartDescription > button {
-  font-size: 1em;
 }
 @media (min-width: 700px) {
-  .wrapper .link {
+  .mainHeader a {
     -webkit-text-stroke: 1px #000000;
     -webkit-text-fill-color: transparent;
   }
-  .wrapper .link:hover {
+  .mainHeader a:hover {
     -webkit-text-stroke: 1px #4545c2;
     -webkit-text-fill-color: aquamarine;
     box-shadow: 0px 0px 6px 3px aquamarine;
   }
 }
 @media (max-width: 700px) {
-  .wrapper > * {
+  .mainHeader > * {
     grid-gap: 5px;
   }
-  .wrapper .link {
+  .mainHeader a {
     letter-spacing: -2px;
     font-size: 1.3em;
     color: aquamarine;
   }
-  .wrapper .cartDescription {
+  .mainHeader .cartDescription {
     font-size: 1.3em;
     grid-gap: 10px;
   }
-  .wrapper .cartDescription > button {
+  .mainHeader .cartDescription > button {
     padding: 1px;
   }
 }
@@ -75,4 +70,4 @@
   }
 }
 
-/*# sourceMappingURL=Header.module.css.map */
+/*# sourceMappingURL=Header.css.map */

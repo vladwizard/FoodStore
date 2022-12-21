@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
-import React, {useState} from "react";
+import React from "react";
 import {useSelector} from "react-redux";
-import style from './Header.module.css'
+import './Header.css'
 
 import {RootState} from "../../Redux/store";
 
@@ -11,13 +11,13 @@ export default function Header({setDark}: { setDark: () => void }) {
     const finalPrice: number = useSelector((state: RootState) => state.cart.finalPrice)
 
     return (
-        <header className={style.wrapper}>
-            <div>
-                <Link className={style.link} to="/">Главная</Link>
-                <Link className={style.link} to="/cart">Корзина</Link>
-            </div>
-            <div className={style.cartDescription}>
-                <p className={style.possiblyNoneDisplay}>Товаров в корзине:</p>
+        <header className='mainHeader'>
+            <nav>
+                <Link to="/">Главная</Link>
+                <Link to="/cart">Корзина</Link>
+            </nav>
+            <div className='cartDescription'>
+                <p className={'possiblyNoneDisplay'}>Товаров в корзине:</p>
                 <p>{cartCount}</p>
                 <p>{finalPrice + '₽'}</p>
                 <button onClick={setDark}>Тема</button>
