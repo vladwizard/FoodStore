@@ -10,10 +10,11 @@ export default function FoodBlock({food}: { food: Food }) {
     const [portionSize, setPortion] = React.useState(0);
 
     return (
-        <article className={style.wrapper}>
+        <article className={style.foodBlock}>
             <img src={food.img} alt=""/>
-            <p className={style.title}>{food.title}</p>
-            <div className={style.user_settings}>
+
+            <main>
+                <p className={style.title}>{food.title}</p>
                 {
                     food.notation == "граммы" ?
                         <div className={style.portion_area}>
@@ -49,7 +50,7 @@ export default function FoodBlock({food}: { food: Food }) {
                         Добавить
                     </button>
                 </div>
-            </div>
+            </main>
         </article>
     )
 }

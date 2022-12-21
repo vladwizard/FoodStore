@@ -1,69 +1,68 @@
 @import "../../commonStyle";
 
-.wrapper {
+.cartBlock {
   height: max-content;
   display: flex;
+  flex-direction: column;
 
-  max-width: 800px;
+  max-width: 700px;
   width: 100%;
-  border-radius: 10px;
-  @media (orientation: portrait) {
+
+  @media (orientation: portrait) and (max-width: 600px) {
 
     flex-direction: column;
     flex-wrap: wrap;
 
   }
-
-  img {
-    height: 250px;
-    width: 250px;
-    border-radius: inherit;
-    max-height: 50vh;
-    display: block;
-    margin: 0 auto;
-    @media (orientation: portrait) {
-      height: 180px;
-      width: 180px;
-    }
-  }
-
-  .title {
-    padding: 2px 5px 4px 7px;
-    font-size: 1em;
-  }
-
-  .right_area {
-    padding: 5px 15px;
-    margin: 10px;
-    width: 95%;
-    box-sizing: border-box;
-    border-radius: 5px;
-    overflow: auto;
-  }
-
-  .count_area {
-    margin-bottom: 5px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 5px 15px;
+  > div{
     display: flex;
-    justify-content: space-between;
-    border-radius: 5px;
-
-    * {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-
-      &:not(:last-child) {
-        margin-bottom: 4px;
-      }
+    @media (orientation: portrait) and (max-width: 600px) {
+      flex-direction: column;
     }
-
-    button {
-      font-size: 1.05em;
-      @include defaultRadio(red);
-    }
-
   }
+}
+
+.img {
+  height: 250px;
+  width: 250px;
+  border-radius: 8px;
+  margin: 0 auto;
+  @media (orientation: portrait) and (max-width: 600px) {
+    height: 180px;
+    width: 180px;
+  }
+}
+
+.title {
+  font-size: 1.2em;
+  padding: 8px 0;
+  margin-left: 8px;
+  @media (orientation: portrait) and (max-width: 600px) {
+    font-size: 1.4em;
+    text-align: center;
+  }
+}
+
+
+.countArea {
+
+  box-sizing: border-box;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  > * {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+  }
+
+  button {
+    font-size: 1.05em;
+    @include defaultRadio(red);
+  }
+
 }

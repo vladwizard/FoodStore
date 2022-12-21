@@ -51,21 +51,19 @@ export default function Home() {
     handleTabletChange(mediaQuery)
 
     return (
-        <main className={style.wrapper}>
-            <article className={style.header}>
+        <main className={style.mainPage}>
+            <header>
                 <div className={style.category_area}>
                     {isMobile ?
                         printCategories.map((str, index) =>
-                            <button onClick={() => {
-                                setCategory(index)
-                            }}
+                            <button onClick={() => {setCategory(index)}}
                                     className={index == currentCategory ? style.active : undefined}
                                     key={str}>
                                 {str}</button>)
                         :
-                        <select className="changingLanguage">
+                        <select onChange={(e)=>setCategory(printCategories.indexOf(e.target.value))}>
                             {printCategories.map((item, index) => {
-                                return <option key={index}>{item}</option>
+                                return <option key={index} onChange={()=>console.log(index)}>{item}</option>
                             })}
                         </select>
                     }
@@ -77,7 +75,7 @@ export default function Home() {
                            setFind(e.target.value);
                            refreshFood();
                        }}/>
-            </article>
+            </header>
             <main ref={contentRef}>
                 {foodArray.map((food1, i) => <FoodBlock food={food1} key={'food' + i}/>)}
             </main>

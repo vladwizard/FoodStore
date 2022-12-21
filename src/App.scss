@@ -9,12 +9,14 @@ body {
 * {
   padding: 0;
   margin: 0;
+  font-size: 1em;
+  line-height: 1em;
 }
 %defaultBox{
   padding: 5px 10px;
+  border-radius: calc(3px + 3 * (100vw / 1920));;
 }
-select{
-  border-radius: 5px;
+select, a{
   @extend %defaultBox;
 }
 button{
@@ -35,4 +37,7 @@ button{
 
 .wrapper{
   min-height: 100vh;
+}
+article{
+  border-radius: 8px;
 }
