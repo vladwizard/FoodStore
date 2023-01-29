@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+.mainHeader {
+  $height: 55px;
+  --indent: 10px;
+  @media (min-width: 1024px) {
+    --indent: 30px;
+  }
+
+  background: var(--main-header-primary);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 var(--indent);
+
+  height: $height;
+  @media (max-width: 1024px) {
+    padding: 0px 10px;
+  }
+  box-shadow: 3px 3px 3px 3px rgb(0, 0, 0, 0.25);
+  display: grid;
+  grid-template-columns: max-content auto max-content max-content;
+  gap: var(--indent);
+  align-items: center;
+  nav {
+    display: flex;
+    height: inherit;
+    gap: var(--indent);
+    align-items: center;
+    > * {
+      font-family: "Fjalla One", sans-serif;
+      font-weight: bold;
+      text-decoration: none;
+
+      font-size: 2.3em;
+      color: var(--main-header-link);
+    }
+  }
+  .cartDescription {
+    align-items: center;
+    background-color: var(--main-header-secondary);
+    display: flex;
+    height: inherit;
+    gap: 20px;
+    padding: 0 20px;
+    font-size: 1.2em;
+    font-weight: 300;
+
+    p {
+      color: var(--text);
+    }
+
+    > * {
+      text-align: end;
+    }
+    > *:nth-last-child(1) {
+      width: 3em;
+    }
+    > *:nth-last-child(2) {
+      width: 1em;
+    }
+  }
+  .theme_button {
+    font-size: 40px;
+    color: var(--button-text);
+
+    font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 48;
+  }
+  $stroke: 1px;
+
+  @media (min-width: 700px) {
+    // a {
+    //   -webkit-text-stroke: $stroke #000000;
+    //   -webkit-text-fill-color: transparent;
+
+    //   &:hover {
+    //     -webkit-text-stroke: $stroke #4545c2;
+    //     -webkit-text-fill-color: aquamarine;
+    //     box-shadow: 0px 0px 6px 3px aquamarine;
+    //   }
+    // }
+  }
+  @media (max-width: 700px) {
+    > * {
+      grid-gap: 5px;
+    }
+    a {
+      letter-spacing: -2px;
+      font-size: 1.3em;
+      color: aquamarine;
+    }
+    .cartDescription {
+      font-size: 1.3em;
+      grid-gap: 10px;
+      > button {
+        padding: 1px;
+      }
+    }
+  }
+}
+
+.possiblyNoneDisplay {
+  display: none;
+  @media (min-width: 1024px) {
+    display: inline-block;
+  }
+}

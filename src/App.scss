@@ -1,9 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: Tahoma, sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: calc(10px + 10 * (100vw / 1920));
+}
+.wrapper {
+  --border-radius: calc(10px + 10 * (100vw / 1920));
+  background: var(--background);
 }
 
 * {
@@ -12,32 +18,67 @@ body {
   font-size: 1em;
   line-height: 1em;
 }
-%defaultBox{
+%defaultBox {
   padding: 5px 10px;
-  border-radius: calc(3px + 3 * (100vw / 1920));;
+  border-radius: calc(3px + 3 * (100vw / 1920));
 }
-select, a{
+select {
   @extend %defaultBox;
 }
-button{
+button {
   @extend %defaultBox;
+  font-family: Source Sans Pro, sans-serif;
   $hoverColor: springgreen;
   box-sizing: border-box;
   border: none;
 
   &:hover {
-    background: $hoverColor !important;
-    box-shadow: 0 0 5px 2px $hoverColor;
+    background: var(--secondary) !important;
+    box-shadow: 0 0 5px 2px var(--secondary);
   }
   &:active {
-    background: $hoverColor;
+    background: var(--secondary);
     opacity: 0.8;
+  }
+  // &:hover {
+  //   background: $hoverColor !important;
+  //   box-shadow: 0 0 5px 2px $hoverColor;
+  // }
+  // &:active {
+  //   background: $hoverColor;
+  //   opacity: 0.8;
+  // }
+}
+
+.wrapper {
+  min-height: 100vh;
+}
+article {
+  border-radius: 8px;
+  background-color: var(--primary);
+  box-shadow: 3px 3px 3px rgb(0, 0, 0, 0.1);
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
+  user-select: none;
+}
+.radio {
+  &:hover {
+    background: var(--sacondary) !important;
+    box-shadow: 0 0 5px 2px var(--secondary);
+  }
+  &.selected {
+    background: var(--secondary);
   }
 }
 
-.wrapper{
-  min-height: 100vh;
+.selected {
+  background: var(--secondary);
 }
-article{
-  border-radius: 8px;
+.good {
+  --secondary: springgreen;
+}
+.bad {
+  --secondary: red;
 }

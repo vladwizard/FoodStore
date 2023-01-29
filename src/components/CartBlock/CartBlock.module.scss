@@ -1,30 +1,24 @@
-@import "../../commonStyle";
-
 .cartBlock {
-  height: max-content;
+  @media (max-width: 400px) {
+    height: max-content;
+  }
   display: flex;
   flex-direction: column;
 
   max-width: 700px;
   width: 100%;
 
-  @media (orientation: portrait) and (max-width: 600px) {
-
-    flex-direction: column;
-    flex-wrap: wrap;
-
-  }
-  > div{
+  > div {
     display: flex;
-    @media (orientation: portrait) and (max-width: 600px) {
+    @media (orientation) {
       flex-direction: column;
     }
   }
 }
 
 .img {
-  height: 250px;
-  width: 250px;
+  width: 100%;
+
   border-radius: 8px;
   margin: 0 auto;
   @media (orientation: portrait) and (max-width: 600px) {
@@ -43,26 +37,23 @@
   }
 }
 
-
 .countArea {
-
   box-sizing: border-box;
   padding: 15px;
 
   display: flex;
   flex-direction: column;
-  grid-gap: 10px;
+  gap: 10px;
   > * {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px
+    gap: 2%;
   }
 
   button {
     font-size: 1.05em;
-    @include defaultRadio(red);
+    --secondary: red;
   }
-
 }

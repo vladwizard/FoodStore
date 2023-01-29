@@ -1,9 +1,8 @@
-@mixin defaultRadio($activeColor) {
-  &:hover {
-    background: $activeColor !important;
-    box-shadow: 0 0 5px 2px $activeColor;
-  }
-  &.active {
-    background: $activeColor;
-  }
-}
+$ifmobile: screen and
+  (
+    orientation: portrait,
+  )
+  and
+  (
+    max-width: 600px,
+  );

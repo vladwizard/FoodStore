@@ -1,13 +1,16 @@
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.4vmin;
-    grid-gap: 1.4vmin;
+
+  padding: 1.4vmin;
+  grid-gap: 1.4vmin;
+  display: grid;
+
+  grid-gap: 2vmin 2%;
+  grid-template-columns: repeat(auto-fill, minmax(calc(130px + (100vw / 1920) * 210), 1fr));
+
 }
 
-
 .empty {
-    font-size: 3em;
-    text-align: center;
+  margin-top: 10%;
+  font-size: 3em;
+  color: var(--functional);
 }

@@ -1,31 +1,28 @@
-@mixin createTheme($background,$header,$blocks,$buttons,$contrastFont,$font){
-  background: $background;
-  .mainHeader {
-    background:$header;
-  }
-
-  article,header{
-    background:$blocks;
-  }
-  button{
-    background:$buttons;
-    color: $font;
-
-    &:hover{
-      color: $contrastFont;
-    }
-  }
-  p,h1{
-    color: $contrastFont;
-  }
+.light_theme {
+  --primary: #ffffff;
+  --background: #f0f0f0;
+  --main-header-secondary: white;
+  --main-header-link: white;
+  --main-header-primary: #009999;
+  --functional: #009999;
+  --text: rgb(31, 28, 28);
+  --secondary-text: white;
+  --button-text: white;
+  --secondary: #FF7400;
 }
-
-.lightTheme{
-  @include createTheme(#efefef, #598e9f,white,
-          #b5b5b5, #1d1d1d,white);
+.dark_theme {
+  --primary: white;
+  --background: #dddddd;
+  --main-header: #598e9f;
+  --functional: #73b0ff;
+  --text: black;
+  --second-text: white;
 }
-.darkTheme{
-  @include createTheme(#575757, #2c2c2c, #363636,
-          #575757, #ffffff, #191919);
-
+button {
+  background: var(--functional);
+  color: var(--button-text);
+}
+p,
+h1 {
+  color: var(--text);
 }

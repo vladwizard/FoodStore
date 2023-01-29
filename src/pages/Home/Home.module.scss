@@ -1,23 +1,32 @@
-@import "../../commonStyle";
-
 .mainPage {
+  font-size: 1.05em;
   flex: 1;
 
   > * {
-    margin: 0.60vw;
+    margin: 1%;
+    @media (min-width: 1024px) {
+      margin: 8px;
+    }
+ 
   }
 
   > header {
+    font-size: 1.05em;
+    height: 2em;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
 
-    $space: 0.45em;
-    padding: $space;
+    $space: 4px;
+
     grid-gap: $space;
 
-
+    > select {
+      border: none;
+      box-shadow: 0px 0px 1px 1px rgb(0, 0, 0, 0.1);
+    }
     .category_area {
+      padding: 0 $space;
       display: flex;
       align-items: center;
       grid-gap: $space;
@@ -25,28 +34,29 @@
       > button {
         font-weight: bold;
         padding: 5px 7px;
-
-        @include defaultRadio(orange);
       }
-
     }
 
-    > input[type='search'] {
+    > input[type="search"] {
+      height: 100%;
       border-radius: 5px;
-      padding: 2px 4px;
+      padding: 2px 6px;
       flex: 1;
       max-width: 300px;
+      border: none;
+      box-shadow: 0px 0px 1px 1px rgb(0, 0, 0, 0.1);
+      &:focus {
+        outline: 2px var(--functional) solid;
+      }
     }
-
   }
 
   > main {
     border-radius: 15px;
     box-sizing: border-box;
-    display: grid;
+    display: grid;  
 
     grid-gap: 2vmin 2%;
     grid-template-columns: repeat(auto-fill, minmax(calc(130px + (100vw / 1920) * 130), 1fr));
-
   }
 }
