@@ -58,5 +58,6 @@
 
     grid-gap: 2vmin 2%;
     grid-template-columns: repeat(auto-fill, minmax(calc(130px + (100vw / 1920) * 130), 1fr));
+    margin-bottom: 0;
   }
 }
