@@ -68,18 +68,6 @@
   }
   $stroke: 1px;
 
-  @media (min-width: 700px) {
-    // a {
-    //   -webkit-text-stroke: $stroke #000000;
-    //   -webkit-text-fill-color: transparent;
-
-    //   &:hover {
-    //     -webkit-text-stroke: $stroke #4545c2;
-    //     -webkit-text-fill-color: aquamarine;
-    //     box-shadow: 0px 0px 6px 3px aquamarine;
-    //   }
-    // }
-  }
   @media (max-width: 700px) {
     > * {
       grid-gap: 5px;

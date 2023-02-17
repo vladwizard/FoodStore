@@ -32,18 +32,19 @@ button {
   box-sizing: border-box;
   border: none;
 
+  // &:hover {
+  //   background: var(--secondary) !important;
+  //   box-shadow: 0 0 5px 2px var(--secondary);
+  // }
+
   &:hover {
-    background: var(--secondary) !important;
-    box-shadow: 0 0 5px 2px var(--secondary);
-  }
-  &:active {
-    background: var(--secondary);
     opacity: 0.8;
   }
-  // &:hover {
-  //   background: $hoverColor !important;
-  //   box-shadow: 0 0 5px 2px $hoverColor;
-  // }
+  &:active {
+    // background: var(--secondary);
+    opacity: 1;
+    box-shadow: 0 0 1px 1px;
+  }
   // &:active {
   //   background: $hoverColor;
   //   opacity: 0.8;
